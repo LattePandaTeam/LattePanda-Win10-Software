@@ -1,0 +1,102 @@
+;/*++
+;
+;Copyright (c) 2014 Realtek Corporation All rights Reserved
+;
+;Module Name:
+;
+;    RtkUart.INF
+;
+;Abstract:
+;    INF file to installing Realtek bluetooth UART bus driver 
+;--*/
+
+[Version]
+Signature="$WINDOWS NT$"
+Class=System
+ClassGuid={4D36E97D-E325-11CE-BFC1-08002BE10318}
+Provider=%REALTEK%
+DriverVer=07/16/2015,1.0.183.2
+CatalogFile=RtkUart.cat
+PnpLockDown=1
+
+[DestinationDirs]
+DefaultDestDir = 12 ;;windows\system32\drivers
+RtkBtUart.CopyList=12   ;; 11, windows\system32
+
+[SourceDisksNames]
+1 = %DiskId1%,,,""
+
+[SourceDisksFiles]
+RtkUart.sys  = 1,,
+rtl8723b_mp_bt40_fw_asic_rom_patch.bin = 1
+rtl8723b_config.bin = 1
+
+[ControlFlags]
+ExcludeFromSelect=*
+
+[Manufacturer]
+%REALTEK%=RealtekMsWin,NTx86.10.0
+
+[RtkBtUart.CopyList]
+RtkUart.sys
+
+;;[Rtk8723BS.CopyList]
+;;rtl8723b_mp_bt40_fw_asic_rom_patch.bin
+;;rtl8723b_config.bin
+
+
+;*****************************************
+; Serial bus driver install Section
+;*****************************************
+
+[RealtekMsWin.NTx86.10.0]
+%RtkBtSoc.DeviceDesc%=Rtk8723BS, ACPI\VEN_OBDA&DEV_8723
+%RtkBtAcer.DeviceDesc%=Rtk8723BS, ACPI\VEN_OBDA&DEV_0623
+%RtkBtBestBuy.DeviceDesc%=Rtk8723BS, ACPI\VEN_OBDA&DEV_0242
+%RtkBtBestBuy.DeviceDesc%=Rtk8723BS, ACPI\VEN_OBDA&DEV_0243
+
+;*****************************************
+; 8723BS Section
+;*****************************************
+
+[Rtk8723BS.NT]
+CopyFiles=RtkBtUart.CopyList
+
+
+[Rtk8723BS.NT.HW]
+AddReg=Rtk8723BS.NT.AddReg
+
+[Rtk8723BS.NT.AddReg]
+; Reference: http://msdn.microsoft.com/en-us/library/ff546320.aspx
+HKR,,DeviceCharacteristics,0x10001,0x0100      ; Use same security checks on relative opens
+HKR,,Security,,"D:P(A;;GA;;;BA)(A;;GA;;;SY)"   ; Allow generic-all access to Built-in administrators and Local system 
+HKR, ,"RemoteWakeEnabled",0x00010001,1
+HKR, ,"DeviceRemoteWakeSupported",0x00010001,1
+HKLM, SYSTEM\CurrentControlSet\services\BTHPORT\Parameters, "SystemRemoteWakeSupported", 0x00010001,1
+
+[Rtk8723BS.NT.Services]
+AddService = RtkUart,%SPSVCINST_ASSOCSERVICE%, Bus_Service_Inst
+
+;*****************************************
+; public section
+;*****************************************
+[Bus_Service_Inst]
+DisplayName    = %RtkBtUart.SVCDESC%
+ServiceType    = 1               ; SERVICE_KERNEL_DRIVER
+StartType      = 3               ; SERVICE_DEMAND_START 
+ErrorControl   = 1               ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %12%\RtkUart.sys
+LoadOrderGroup = Extended Base
+
+[Strings]
+;Non-Localizable
+SPSVCINST_ASSOCSERVICE= 0x00000002
+
+;Localizable
+REALTEK= "Realtek Semiconductor Corp"
+DiskId1 = "Realtek Bluetooth UART Bus Driver Installation Disk #1"
+RtkBtSoc.DeviceDesc = "Realtek Bluetooth UART Bus Driver"
+RtkBtAcer.DeviceDesc = "Realtek Bluetooth Bus Driver"
+RtkBtBestBuy.DeviceDesc = "Realtek Bluetooth Bus Driver"
+RtkBtUart.SVCDESC = "Realtek Bluetooth UART Bus Driver Service"
+

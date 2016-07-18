@@ -1,0 +1,95 @@
+/*++
+;
+; Copyright (c) Intel Corporation.  All rights reserved.
+;
+;Module Name:
+;    AdvSensorHIDClassDriverV2.INF
+;
+;Abstract:
+;    INF file for installing the Sensors 2.0 Custom Sensor Driver
+;
+;Installation Notes: 
+;    Using Devcon: Type "devcon install AdvSensorHIDClassDriverV2.inf HID\Vid_8086&Pid_0002" to install
+;
+;--*/
+
+[Version]
+Signature   = "$WINDOWS NT$"
+Class       = Sensor
+ClassGuid   = {5175D334-C371-4806-B3BA-71FD53C9258D}
+Provider    = %INTC%
+CatalogFile = AdvSensorHIDClassDriverV2.cat
+DriverVer=11/01/2015,2.0.20.3157
+
+[DestinationDirs]
+;12 == Windows\System32\Drivers\UMDF
+DefaultDestDir = 12,UMDF
+
+[SourceDisksNames]
+1 = %MediaDescription%,,,""
+
+[SourceDisksFiles]
+AdvSensorHIDClassDriverV2.dll   = 1,,
+
+[Manufacturer]
+%INTC%                        = Intel,NTx86
+
+;*******************************
+; Install Section
+;*******************************
+
+[Intel.NTx86]
+; DisplayName       Section          DeviceId
+; -----------       -------          --------
+%AdvSensorHIDClassDriverV2_DevDesc% = AdvSensorHIDClassDriverV2_Inst, HID\Vid_8086&Pid_0002
+
+[AdvSensorHIDClassDriverV2_Inst.NT]
+CopyFiles = AdvSensorHIDClassDriverV2DriverCopy
+
+[AdvSensorHIDClassDriverV2DriverCopy]
+AdvSensorHIDClassDriverV2.dll
+
+[DestinationDirs]
+AdvSensorHIDClassDriverV2DriverCopy = 12,UMDF
+
+;-------------- Service installation
+
+[AdvSensorHIDClassDriverV2_Inst.NT.Services]
+AddService = WUDFRd,0x000001fa,WUDFRD_ServiceInstall
+
+[AdvSensorHIDClassDriverV2_Inst.NT.CoInstallers]
+AddReg = CoInstallers_AddReg
+
+[WUDFRD_ServiceInstall]
+DisplayName   = %WudfRdDisplayName%
+ServiceType   = %SERVICE_KERNEL_DRIVER%
+StartType     = %SERVICE_DEMAND_START%
+ErrorControl  = %SERVICE_ERROR_NORMAL%
+ServiceBinary = %12%\WUDFRd.sys
+
+;-------------- WDF specific section
+
+[AdvSensorHIDClassDriverV2_Inst.NT.Wdf]
+UmdfService              = AdvSensorHIDClassDriverV2, AdvSensorHIDClassDriverV2_Install
+UmdfServiceOrder         = AdvSensorHIDClassDriverV2
+UmdfDirectHardwareAccess = AllowDirectHardwareAccess
+UmdfFileObjectPolicy     = AllowNullAndUnknownFileObjects
+UmdfFsContextUsePolicy   = CannotUseFsContexts
+
+[AdvSensorHIDClassDriverV2_Install]
+UmdfLibraryVersion       = 2.15.0
+ServiceBinary            = %12%\UMDF\AdvSensorHIDClassDriverV2.dll
+UmdfExtensions           = SensorsCx0102
+
+[CoInstallers_AddReg]
+HKR,,CoInstallers32,0x00010000,"WudfCoinstaller.dll"
+
+[Strings]
+INTC                        = "Intel Corporation"
+MediaDescription         = "Intel Advanced Sensor HID Class Driver V2 Installation Media"
+AdvSensorHIDClassDriverV2_DevDesc    = "HID Advanced Sensor Collection V2"
+WudfRdDisplayName        = "Windows Driver Foundation - User-mode Driver Framework Reflector"
+
+SERVICE_KERNEL_DRIVER    = 1
+SERVICE_DEMAND_START     = 3
+SERVICE_ERROR_NORMAL     = 1
