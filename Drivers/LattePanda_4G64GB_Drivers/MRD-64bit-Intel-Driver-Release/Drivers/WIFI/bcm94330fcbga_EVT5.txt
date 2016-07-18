@@ -1,0 +1,96 @@
+#EVT5 NVRAM
+manfid=0x2d0
+prodid=0x0547
+vendid=0x14e4
+devid=0x4360
+boardtype=0x05e1
+boardrev=0x1202
+boardflags=0x10080a01
+nocrc=1
+xtalfreq=26000
+boardnum=22
+macaddr=00:90:4c:c5:12:38
+ag0=255
+aa2g=1
+aa5g=1
+ccode=XY
+regrev=4
+pa0itssit=0x20
+pa0b0=4924
+pa0b1=-595
+pa0b2=-157
+rssismf2g=0xa
+rssismc2g=0x3
+rssisav2g=0x7
+#rssi params for 5GHz
+rssismf5g=0x4
+rssismc5g=0x3
+rssisav5g=0x7
+#PA parameters for lower a-band
+pa1lob0=5050
+pa1lob1=-630
+pa1lob2=-195
+#PA parameters for midband
+pa1b0=4880
+pa1b1=-625
+pa1b2=-200
+#PA parameters for high band
+pa1hib0=4880
+pa1hib1=-620
+pa1hib2=-190
+rxpo5g=0
+maxp2ga0=0x44
+maxp5ga0=0x3A
+maxp5gla0=0x3A
+maxp5gha0=0x3A
+# 2.4G Tx Power offsets
+ofdm2gpo=0x22222222
+mcs2gpo0=0x4444
+mcs2gpo1=0x4444
+# 5G Tx Power offsets
+ofdm5gpo=0x00000000
+ofdm5glpo=0x00000000
+ofdm5ghpo=0x00000000
+mcs5gpo0=0x2222
+mcs5gpo1=0x2222
+mcs5glpo0=0x2222
+mcs5glpo1=0x2222
+mcs5ghpo0=0x2222
+mcs5ghpo1=0x2222
+sromrev=3
+il0macaddr=00:90:4c:c5:12:38
+wl0id=0x431b
+cckPwrOffset=6
+triso2g=3
+#swctrlmap_2g=0x44844484,0x42824282,0x42824282,0x18282,0x1ff
+swctrlmap_2g=0x04040404,0x02020202,0x02020202,0x18282,0x1ff
+triso5g=6
+swctrlmap_5g=0x10101010,0x28282020,0x20202020,0x10202,0x0f8
+noise_cal_ref_2g=53
+rfreg033=0x19
+rfreg033_cck=0x1f
+dacrate2g=160
+dacrate5g=160
+txalpfbyp2g=1
+bphyscale=17
+cckPwrIdxCorr=-15
+pacalpwr5glo=13
+pacalpwr5glo1=11
+pacalpwr5g=13
+pacalpwr5g1=11
+pacalpwr5ghi=13
+pacalpwr5ghi1=11
+#pacalpwr2g1=13
+#pacalath2g=180
+#pacalidx2g1=55
+pacalpwr2g=13
+txgaintbl=1
+rfreg088=15
+cckdigfilttype=20
+noise_cal_adj_2g=-3
+#wake on wireless LAN
+sd_gpout=0
+sd_gpval=1
+sd_gpdc=0
+#for BT-coexistence
+btc_params80=0
