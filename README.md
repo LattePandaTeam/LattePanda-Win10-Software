@@ -4,7 +4,6 @@
 Contains the following:
 
 - LattePanda Bios 
-- LattePanda official OS images
 - LattePanda Windows 10 drivers
 - LattePanda Sensor libraries and samples
 
