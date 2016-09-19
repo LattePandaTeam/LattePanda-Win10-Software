@@ -1,16 +1,19 @@
-# LattePanda-BIOS
+# LattePanda-BIOS Beta
 ----------------
 
 Contains the following:
 
-- LattePanda default BIOS
-- LattePanda auto power on BIOS
+- LattePanda default BIOS Beta
+- LattePanda auto power on BIOS Beta
 
 The difference between two BIOS
 
 For the LattePanda factory setting, press the power button after connecting the power cable to the board. However in most embeded usage, the system requires an auto startup feature after plugin the power adapter. So we customize the "auto power on BIOS".
 
+### Disclaimer:   
 
+Please note that this is a beta version of the Bios which is still undergoing final testing before its official release.  This version is test-only，and is not covered under your warranty. Before you reflash the bios, please ensure that you have saved the Windows product key code and you have an SPI chip programmer to reflash the bios at hardware level.  
+  
 ### How to refresh the LattePanda BIOS:
 
 1. Format your U-disk to FAT32
