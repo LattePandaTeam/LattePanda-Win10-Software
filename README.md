@@ -3,7 +3,7 @@
 
 Contains the following:
 
-- LattePanda Bios 
+- LattePanda Bios Beta
 - LattePanda Windows 10 drivers
 - LattePanda Sensor libraries and samples
 
