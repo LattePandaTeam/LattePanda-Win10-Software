@@ -12,39 +12,32 @@ Contains the following:
 
 2. Unzip the driver pack and copy the "CHT T3 MRD PR2 Driver WW51.2" folder to "C:\"
 
-    ![Folder](https://github.com/LattePandaTeam/LattePanda-Win10-Software/blob/master/Drivers/images/Folder.PNG)
+![Folder](https://github.com/LattePandaTeam/LattePanda-Win10-Software/blob/master/Drivers/images/Folder.PNG)
 
 3. Open CMD from Windows system. 
 
-   1. Click on Home button
-
-   2. Search "CMD" or "Command Prompt"
-
-   3. Right click on "Command Prompt", Run as administrator!!!
-
-      **NOTE**: Run as administrator!!! 
-
-      You WON'T install the drivers successfully without this step!!!
-
+   *  Click on Home button
+   *  Search "CMD" or "Command Prompt"
+   *  Right click on "Command Prompt", Run as administrator!!!
+        **NOTE**: Run as administrator!!! 
+        You WON'T install the drivers successfully without this step!!!
 
 4. Start driver installation by running the following commands. 
 
    * cd C:\
-
-
    * cd "CHT T3 MRD PR2 Driver WW51.2"
    * cd Script
    * Install.bat
 
-    ![Run CMD](https://github.com/LattePandaTeam/LattePanda-Win10-Software/blob/master/Drivers/images/Run%20CMD.PNG)
+![Run CMD](https://github.com/LattePandaTeam/LattePanda-Win10-Software/blob/master/Drivers/images/Run%20CMD.PNG)
 
 5. Accept "Install the driver software anyway" for Windows security warning. 
 
- ![Warning](https://github.com/LattePandaTeam/LattePanda-Win10-Software/blob/master/Drivers/images/Warning.PNG)
+![Warning](https://github.com/LattePandaTeam/LattePanda-Win10-Software/blob/master/Drivers/images/Warning.PNG)
 
 6. Success to install the driver pack after 1-2 minutes. 
 
- ![Succeed to install](https://github.com/LattePandaTeam/LattePanda-Win10-Software/blob/master/Drivers/images/Succeed%20to%20install.PNG)
+![Succeed to install](https://github.com/LattePandaTeam/LattePanda-Win10-Software/blob/master/Drivers/images/Succeed%20to%20install.PNG)
 
 
 
