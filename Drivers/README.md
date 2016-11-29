@@ -8,9 +8,49 @@ Contains the following:
 
 ### How to install:   
 
-- For details, see the "MRD_Drivers install Readme.txt".  
+1. Download the right driver package.
+2. Unzip the driver pack and copy the "CHT T3 MRD PR2 Driver WW51.2" folder to "C:\" ![Folder](images\Folder.PNG)
+3. Open CMD from Windows system. 
+
+   1. Click on Home button
+   2. Search "CMD" or "Command Prompt"
+   3. Right click on "Command Prompt", Run as administrator!!!
+
+* **NOTE**: Run as administrator!!! You WON'T install the drivers successfully without this step!!!
+
+4. Start driver installation by running the following commands. 
+
+   1. * cd C:\
+      * cd "CHT T3 MRD PR2 Driver WW51.2"
+      * cd Script
+        * Install.bat
+
+    ![Run CMD](images\Run CMD.PNG)
+
+5. Accept "Install the driver software anyway" for Windows security warning. 
+
+ ![Warning](images\Warning.PNG)
+
+6. Success to install the driver pack after 1-2 minutes. 
+
+ ![Succeed to install](images\Succeed to install.PNG)
+
+
+
+
+
+### Social Media:
 
 Follow us on Twitter for updates and more information: https://twitter.com/LattePandaCN
 
-Designed by Cain, Kelvin and Lauren for LattePanda
+Facebook LattePanda Group: https://www.facebook.com/groups/LattePandaMakers/
 
+
+
+### Helpful Links:
+
+Do you have a business inquiry for a commercial product? Please contact *lattepanda@outlook.com*
+
+Do you have a LattePanda project to show us? Post on our [cool projects forum](http://www.lattepanda.com/forum/viewforum.php?f=11) or drop us a tweet *@lattepandacn*
+
+If you have any further questions please let us know on our [community forum](http://www.lattepanda.com/forum) or in the comments below.

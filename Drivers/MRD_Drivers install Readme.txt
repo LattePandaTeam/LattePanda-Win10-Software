@@ -15,6 +15,8 @@ Run the setup.exe and follow the prompts to install the drivers. Setup.exe is lo
 2.3.1 Open CMD as administrator in the Scripts folder.
 2.3.2 run "Install.bat"
 
+Recommended to move and copy the driver pack to the C:\\ folder.
+
 3.Appendix A - Driver Package Information
 Drivers are located in the following folder:
 .. ****-WW**\Installer\PlatformInstaller\Drivers
