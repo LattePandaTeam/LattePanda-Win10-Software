@@ -17,17 +17,24 @@ Contains the following:
 3. Open CMD from Windows system. 
 
    1. Click on Home button
+
    2. Search "CMD" or "Command Prompt"
+
    3. Right click on "Command Prompt", Run as administrator!!!
 
-* **NOTE**: Run as administrator!!! You WON'T install the drivers successfully without this step!!!
+      **NOTE**: Run as administrator!!! 
+
+      You WON'T install the drivers successfully without this step!!!
+
 
 4. Start driver installation by running the following commands. 
 
-   1. * cd C:\
-      * cd "CHT T3 MRD PR2 Driver WW51.2"
-      * cd Script
-        * Install.bat
+   * cd C:\
+
+
+   * cd "CHT T3 MRD PR2 Driver WW51.2"
+   * cd Script
+   * Install.bat
 
     ![Run CMD](https://github.com/LattePandaTeam/LattePanda-Win10-Software/blob/master/Drivers/images/Run%20CMD.PNG)
 
