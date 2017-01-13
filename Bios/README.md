@@ -3,6 +3,8 @@
 ### What's new:
 In LattePanda v1.1, we put the auto-boot switch inside the BIOS setting.
 
+
+
 Contains the following:
 
 - LattePanda default BIOS Beta
