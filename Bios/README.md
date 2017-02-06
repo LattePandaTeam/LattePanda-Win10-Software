@@ -1,7 +1,8 @@
 # LattePanda-BIOS Beta
 ----------------
 ### What's new:
-**In LattePanda v1.1, we put the auto-boot switch inside the BIOS setting.**
+**fixed the problem of USB 3.0 port can not reconginized the USB 3.0 device correctly **
+**In LattePanda v1.1, we put the auto-boot switch inside the BIOS setting.Find more as follows **
 
 
 
