@@ -1,9 +1,10 @@
 # LattePanda v1.1 BIOS Beta
 ----------------
 ### Updated：
--J:  
-2017/2/13  
-**fixed the problem of the key may be covered after flash BIOS **  
+-I:  
+2017/2/13
+
+**update the tools:fixed the problem of the key may be covered after flash BIOS **  
   
 -I:  
 2017/1/26  
