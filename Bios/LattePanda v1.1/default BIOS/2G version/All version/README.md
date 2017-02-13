@@ -3,16 +3,16 @@
 ### Updated：
 -J:  
 2017/2/13  
-**fixed the problem of the key be covered after flash BIOS **  
+**fixed the problem of the key may be covered after flash BIOS **  
   
 -I:  
 2017/1/26  
-**fixed the problem of USB 3.0 port can not reconginized the USB 3.0 device correctly  ** 
-**stability improvements**  
+**fixed the problem of USB 3.0 port can not reconginized the USB 3.0 device correctly **   
+**stability improvements **  
   
 -F:  
 2017/1/25  
-**change the USB debice as boot option #1 back**  
+**change the USB debice as boot option #1 back **  
   
 
 
