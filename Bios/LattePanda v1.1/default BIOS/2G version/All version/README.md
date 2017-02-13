@@ -5,7 +5,7 @@
 2017/2/13  
 **update the tools: fixed the problem of the key may be covered after flash BIOS **  
   
-***-I:*** 
+***-I:***   
 2017/1/26  
 **fixed the problem of USB 3.0 port can not reconginized the USB 3.0 device correctly **   
 **stability improvements **  
