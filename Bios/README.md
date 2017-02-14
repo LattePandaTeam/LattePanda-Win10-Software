@@ -1,21 +1,12 @@
 # LattePanda-BIOS Beta
 ----------------
-### What's new:
-**fixed the problem of USB 3.0 port can not reconginized the USB 3.0 device correctly **  
-**In LattePanda v1.1, we put the auto-boot switch inside the BIOS setting.Find more as follows **
-
-
-
+  
 Contains the following:
 
-- LattePanda default BIOS Beta
-- LattePanda auto power on BIOS Beta
+- LattePanda v1.0 default BIOS Beta
 - LattePanda v1.1 default BIOS Beta
 
-The difference between three BIOS
 
-For the LattePanda factory setting, press the power button after connecting the power cable to the board. However in most embeded usage, the system requires an auto startup feature after plugin the power adapter. So we customize the "auto power on BIOS".
-And in LattePanda v1.1, we made some changes in the new BIOS. Such as we lock some items may cause the LP died or no output, and we embed auto-power switch in the BIOS. So no need to flash it anymore.
 
 **Note: LattePanda v1.1 default BIOS Beta can only use in LattePanda v1.1 which is using Z8350 CPU.** 
 You can distinguishing between both by the stick on the side of the board.  
