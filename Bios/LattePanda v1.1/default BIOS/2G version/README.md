@@ -1,3 +1,7 @@
+**-I:**  
+2017/2/13  
+**update the tools: fixed the problem of the key may be covered after flash BIOS **
+
 ### Disclaimer:   
 
 Please note that this is a beta version of the Bios which is still undergoing final testing before its official release.  This version is test-only，and is not covered under your warranty. Before you reflash the bios, please ensure that you have saved the Windows product key code and you have an SPI chip programmer to reflash the bios at hardware level.  
