@@ -9,9 +9,9 @@ Contains the following:
 **Note: LattePanda v1.1 default BIOS Beta can only use in LattePanda v1.1 which is using Z8350 CPU.**   
 ### How to Figure out the verison of your lattePanda
 
-You can distinguishing between both by the stick on the side of the board.  
-Z8300 = V1.0  
-Z8350 = V1.1  
+You can distinguishing between both by the stick on the side of the board.    
+Z8300 -> V1.0  
+Z8350 -> V1.1  
 ![Z8350 stick.png](http://www.lattepanda.com/wp-content/uploads/2017/02/8350-stick.png)
 
 ### How to switch on/off the Auto-boot function in LP v1.1:
