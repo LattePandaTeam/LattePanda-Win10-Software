@@ -15,7 +15,10 @@ Contains the following:
 
 ### Disclaimer:   
 
-Please note that this is a beta version of the Bios which is still undergoing final testing before its official release.  This version is test-only，and is not covered under your warranty. Before you reflash the bios, please ensure that you have saved the Windows product key code and you have an SPI chip programmer to reflash the bios at hardware level.  
+Please note that this is a **beta** version of the bios which is still undergoing final testing before its official release.  
+This version is **test-only**, so **please confirm with us** before you reflash the bios.  
+**Reflashing without notifying us can put your board in a state of no return and void your warranty.**  
+Ensure that you have saved the Windows product key code and you have an SPI chip programmer to reflash the bios at hardware level  
   
 
 
