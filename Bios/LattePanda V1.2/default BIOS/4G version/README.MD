@@ -1,6 +1,6 @@
 **-B:**  
 2017/6/8  
-**Add Add the default version for LP V1.2 4G**
+**Add the default version for LP V1.2 4G**
 
 ### Disclaimer:   
 
