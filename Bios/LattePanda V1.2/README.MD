@@ -1,17 +1,17 @@
-# LattePanda v1.1 BIOS Beta
+# LattePanda v1.2 BIOS Beta
 ----------------
 ### What's new:
-**In LattePanda v1.1, we put the auto-boot switch inside the BIOS setting.Find more as follows **
+**In LattePanda v1.2, we put the auto-boot switch inside the BIOS setting.Find more as follows **
 
 
-### How to switch on/off the Auto-boot function in LP v1.1:
+### How to switch on/off the Auto-boot function in LP v1.2:
 1.	Press [Esc] or [Del] once just boot up the system to enter the BIOS
 2.	Go into Boot->Machine Status AC/Battery In
 3.	Change it to Power On/Power Off
 
 Contains the following:
 
-- LattePanda v1.1 default BIOS Beta
+- LattePanda v1.2 default BIOS Beta
 
 ### Disclaimer:   
 
