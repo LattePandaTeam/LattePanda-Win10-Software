@@ -1,6 +1,6 @@
 **-B:**  
-2017/6/8
-**Add the default LP V1.2 4G BIOS**
+2017/6/8  
+**Add Add the default version for LP V1.2 4G**
 
 ### Disclaimer:   
 
