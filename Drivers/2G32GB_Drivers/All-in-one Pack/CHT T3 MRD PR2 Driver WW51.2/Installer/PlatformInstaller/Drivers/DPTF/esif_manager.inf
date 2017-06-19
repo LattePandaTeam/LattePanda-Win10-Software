@@ -1,0 +1,386 @@
+;-------------------------------------------------------------------------------
+; INTEL CONFIDENTIAL
+;
+; Copyright (c) 2013-2015 Intel Corporation All Rights Reserved 
+;
+; The source code contained or described herein and all documents related to 
+; the source code ("Material") are owned by Intel Corporation or its suppliers 
+; or licensors. Title to the Material remains with Intel Corporation or its 
+; suppliers and licensors. The Material contains trade secrets and proprietary 
+; and confidential information of Intel or its suppliers and licensors. The 
+; Material is protected by worldwide copyright and trade secret laws and treaty 
+; provisions. No part of the Material may be used, copied, reproduced, 
+; modified, published, uploaded, posted, transmitted, distributed, or 
+; disclosed in any way without Intel's prior express written permission.
+;
+; No license under any patent, copyright, trade secret or other intellectual 
+; property right is granted to or conferred upon you by disclosure or delivery 
+; of the Materials, either expressly, by implication, inducement, estoppel or 
+; otherwise. Any license under such intellectual property rights must be 
+; expressed and approved by Intel in writing.
+;------------------------------------------------------------------------------
+
+[Version] 
+Signature = "$WINDOWS NT$" 
+Class = DPTF
+ClassGUID = {C3077FCD-9C3C-482F-9317-460712F23EFD}
+Provider = %INTEL% 
+CatalogFile = esif_manager.cat
+DriverVer=07/24/2015,8.1.10900.175
+
+;----------------------------------------------------------------------
+; File Information
+;----------------------------------------------------------------------
+
+[SourceDisksNames]
+1 = %DiskName%,,,""
+
+[SourceDisksFiles]
+esif_lf.sys = 1
+esif_umdf.dll = 1
+esif_umdf2.dll = 1
+WdfCoInstaller01011.dll = 1
+WudfUpdate_01011.dll = 1
+dsp.dv = 1
+esif_uf.exe = 1
+msvcp120.dll = 1
+msvcr120.dll = 1
+Dptf.dll = 1
+DptfPolicyPassive.dll = 1
+DptfPolicyPassive2.dll = 1
+DptfPolicyLpm.dll = 1
+DptfPolicyAct.dll = 1
+DptfPolicyCritical.dll = 1
+DptfPolicyActive.dll = 1
+DptfPolicyCoolingMode.dll = 1
+DptfPolicyConfigTdp.dll = 1
+DptfPolicyHdc.dll = 1
+DptfPolicyAdaptivePerformance.dll = 1
+DptfPolicyDbpt.dll = 1
+DptfPolicyVirtualSensor.dll = 1
+upe_wwan.dll = 1
+
+[DestinationDirs]
+DefaultDestDir = 12
+EsifUf_CopyFiles = 12, UMDF
+EsifUf6.3_CopyFiles = 12, UMDF
+CoInstaller_CopyFiles = 11
+EsifDspDv_CopyFiles = 10, %DvDir%
+EsifUfService_CopyFiles = 11, %InstallDir%
+EsifMsvcPDll_CopyFiles = 11
+EsifMsvcRDll_CopyFiles = 11
+EsifDptfDll_CopyFiles = 11, %InstallDir%
+
+;-------------------------------------------------------------------------------
+; Class Section
+;-------------------------------------------------------------------------------
+
+[ClassInstall32]
+AddReg=DPTFClass_AddReg
+
+[DPTFClass_AddReg]
+HKR,,,,%ClassName%
+HKR,,Icon,,"-27"
+
+
+;-------------------------------------------------------------------------------
+; Manufacturer and Models Section
+;-------------------------------------------------------------------------------
+
+[Manufacturer]
+%INTEL% = INTEL, NTx86.6.1, NTx86.6.3
+
+[INTEL.NTx86.6.1]
+%INT3400.DeviceDesc%  = EsifManager,ACPI\INT3400
+
+[INTEL.NTx86.6.3]
+%INT3400.DeviceDesc%  = EsifManager6.3,ACPI\INT3400
+
+;------------------------------------------------------------------------------
+; EsifManager 
+;------------------------------------------------------------------------------
+
+[EsifManager.NTx86]
+CopyFiles = EsifLf_CopyFiles, EsifUfService_CopyFiles, EsifUf_CopyFiles, EsifMsvcPDll_CopyFiles, EsifMsvcRDll_CopyFiles, EsifDptfDll_CopyFiles, EsifDspDv_CopyFiles
+AddPowerSetting = DptfPolicyCoolingPowerLimitDppeSettings
+AddPowerSetting = DptfPolicyCoolingAcousticsLimitDppeSettings
+AddPowerSetting = DptfPolicyConfigTdpLevelDppeSettings
+AddPowerSetting = DptfPolicyLpmModeDppeSettings
+AddPowerSetting = DptfPolicyHdcEnableDppeSettings
+
+[EsifManager6.3.NTx86]
+CopyFiles = EsifLf_CopyFiles, EsifUfService_CopyFiles, EsifUf6.3_CopyFiles, EsifMsvcPDll_CopyFiles, EsifMsvcRDll_CopyFiles, EsifDptfDll_CopyFiles, EsifDspDv_CopyFiles
+AddPowerSetting = DptfPolicyCoolingPowerLimitDppeSettings
+AddPowerSetting = DptfPolicyCoolingAcousticsLimitDppeSettings
+AddPowerSetting = DptfPolicyConfigTdpLevelDppeSettings
+AddPowerSetting = DptfPolicyLpmModeDppeSettings
+AddPowerSetting = DptfPolicyHdcEnableDppeSettings
+
+[EsifLf_CopyFiles]
+esif_lf.sys,,,2
+
+[EsifUf_CopyFiles]
+esif_umdf.dll,,,2
+
+[EsifUf6.3_CopyFiles]
+esif_umdf2.dll,,,2
+
+[EsifManager.NTx86.Services]
+AddService = esif_lf,0x00000002, EsifLf_InstallService
+AddService = WUDFRd,0x000001f8, WUDFRD_InstallService
+AddService = esifsvc, 0x000009f8, EsifUf_InstallService, EsifUfEventLog_Install, Application, DPTF
+
+[EsifManager6.3.NTx86.Services]
+AddService = esif_lf,0x00000002, EsifLf_InstallService
+AddService = WUDFRd,0x000001f8, WUDFRD_InstallService
+AddService = esifsvc, 0x000009f8, EsifUf_InstallService, EsifUfEventLog_Install, Application, DPTF
+
+[EsifLf_InstallService]
+ServiceType    = %SERVICE_KERNEL_DRIVER%
+StartType      = %SERVICE_DEMAND_START%
+ErrorControl   = %SERVICE_ERROR_NORMAL%
+ServiceBinary  = %12%\esif_lf.sys
+LoadOrderGroup = Base
+
+[WUDFRD_InstallService]
+DisplayName    = %DisplayName%
+ServiceType    = %SERVICE_KERNEL_DRIVER%
+StartType      = %SERVICE_DEMAND_START%
+ErrorControl   = %SERVICE_ERROR_NORMAL%
+ServiceBinary  = %12%\WUDFRd.sys
+
+[EsifManager.NTx86.HW]
+AddReg = Hw_AddFilterReg
+
+[EsifManager6.3.NTx86.HW]
+AddReg = Hw_AddFilterReg
+
+[Hw_AddFilterReg]
+HKR,,"UpperFilters", 0x00010008, "WUDFRd"
+HKR,,Security,,"D:P(A;;GA;;;SY)(A;;GA;;;BA)"
+
+[EsifManager.NTx86.CoInstallers]
+AddReg = CoInstaller_AddReg
+CopyFiles = CoInstaller_CopyFiles
+
+[EsifManager6.3.NTx86.CoInstallers]
+AddReg = CoInstaller_AddReg6.3
+CopyFiles = CoInstaller_CopyFiles6.3
+
+[CoInstaller_AddReg]
+HKR,,CoInstallers32,0x00010000,"WdfCoInstaller01011.dll,WdfCoInstaller","WUDFUpdate_01011.dll"
+
+[CoInstaller_AddReg6.3]
+HKR,,CoInstallers32,0x00010000,"WdfCoInstaller01011.dll,WdfCoInstaller","WudfCoInstaller.dll"
+
+[CoInstaller_CopyFiles]
+WdfCoInstaller01011.dll
+WudfUpdate_01011.dll
+
+[CoInstaller_CopyFiles6.3]
+WdfCoInstaller01011.dll
+
+[EsifManager.NTx86.Wdf]
+KmdfService = esif_lf, Wdf_KmdfSection
+UmdfService = esif_umdf, Wdf_UmdfSection
+UmdfServiceOrder = esif_umdf
+UmdfImpersonationLevel = Impersonation
+UmdfKernelModeClientPolicy = AllowKernelModeClients 
+UmdfFileObjectPolicy = AllowNullAndUnknownFileObjects
+UmdfHostProcessSharing = ProcessSharingDisabled
+UmdfDispatcher = FileHandle
+
+[EsifManager6.3.NTx86.Wdf]
+KmdfService = esif_lf, Wdf_KmdfSection
+UmdfService = esif_umdf2, Wdf_UmdfSection6.3
+UmdfServiceOrder = esif_umdf2
+UmdfImpersonationLevel = Impersonation
+UmdfKernelModeClientPolicy = AllowKernelModeClients 
+UmdfFileObjectPolicy = AllowNullAndUnknownFileObjects
+UmdfHostProcessSharing = ProcessSharingDisabled
+UmdfDispatcher = FileHandle
+
+[Wdf_KmdfSection]
+KmdfLibraryVersion = 1.11
+
+[Wdf_UmdfSection]
+UmdfLibraryVersion = 1.11.0
+DriverCLSID = "{6DB77BB7-60A2-4B92-8AD0-E19ECF2AB738}"
+ServiceBinary = %12%\UMDF\esif_umdf.dll
+
+[Wdf_UmdfSection6.3]
+UmdfLibraryVersion = 2.0.0 ;hardcoded as the same inf is used for 1.11 too.
+ServiceBinary = %12%\UMDF\esif_umdf2.dll
+
+;----------------------------------------------------------------------
+; Various ESIF UF components.
+;----------------------------------------------------------------------
+
+[EsifUfService_CopyFiles]
+esif_uf.exe,,,%COPYFLG_NOSKIP%
+
+[EsifMsvcPDll_CopyFiles]
+msvcp120.dll,,,%COPYFLG_NOSKIP%
+
+[EsifMsvcRDll_CopyFiles]
+msvcr120.dll,,,%COPYFLG_NOSKIP%
+
+[EsifDptfDll_CopyFiles]
+Dptf.dll,,,%COPYFLG_NOSKIP%
+DptfPolicyPassive.dll,,,%COPYFLG_NOSKIP%
+DptfPolicyPassive2.dll,,,%COPYFLG_NOSKIP%
+DptfPolicyLpm.dll,,,%COPYFLG_NOSKIP%
+DptfPolicyAct.dll,,,%COPYFLG_NOSKIP%
+DptfPolicyCritical.dll,,,%COPYFLG_NOSKIP%
+DptfPolicyActive.dll,,,%COPYFLG_NOSKIP%
+DptfPolicyCoolingMode.dll,,,%COPYFLG_NOSKIP%
+DptfPolicyConfigTdp.dll,,,%COPYFLG_NOSKIP%
+DptfPolicyHdc.dll,,,%COPYFLG_NOSKIP%
+DptfPolicyAdaptivePerformance.dll,,,%COPYFLG_NOSKIP%
+DptfPolicyDbpt.dll,,,%COPYFLG_NOSKIP%
+DptfPolicyVirtualSensor.dll,,,%COPYFLG_NOSKIP%
+upe_wwan.dll,,,%COPYFLG_NOSKIP%
+msvcp120.dll,,,%COPYFLG_NOSKIP%
+msvcr120.dll,,,%COPYFLG_NOSKIP%
+
+[EsifDspDv_CopyFiles]
+dsp.dv,,,%COPYFLG_NOSKIP%
+
+[EsifUf_InstallService]
+DisplayName=%ServiceDisplayName%
+Description=%ServiceDescription%
+ServiceType = %SERVICE_WIN32_OWN_PROCESS%
+StartType = %SERVICE_AUTO_START%
+ErrorControl = %SERVICE_ERROR_NORMAL%
+ServiceBinary = %11%\%InstallDir%\%ServiceFile%
+
+[EsifUfEventLog_Install]
+AddReg=EsifUfEventLog_AddReg
+
+[EsifUfEventLog_AddReg]
+HKR,,TypesSupported,%FLG_ADDREG_TYPE_DWORD%,7
+HKR,,EventMessageFile,%FLG_ADDREG_TYPE_SZ%,%11%\%InstallDir%\%ServiceFile%
+HKR,,CategoryCount,%FLG_ADDREG_TYPE_DWORD%,3
+HKR,,CategoryMessageFile,%FLG_ADDREG_TYPE_SZ%,%11%\%InstallDir%\%ServiceFile%
+
+;----------------------------------------------------------------------
+; Dptf DPPE settings.
+;----------------------------------------------------------------------
+
+[DptfPolicyCoolingPowerLimitDppeSettings]
+SubGroup    = %GUID_DPTF_GROUP%,"Intel(R) Dynamic Platform and Thermal Framework Settings", "Intel(R) Dynamic Platform and Thermal Framework Settings"
+Setting     = %GUID_DPTF_PWRLIMIT%,"Power Limit","Specify the power limit for Intel(R) Dynamic Platform and Thermal Framework"
+ValueRange  = 1, 5, 1, "Level"
+Default     = %GUID_MAX_POWER_SAVINGS%, %AC%, 1
+Default     = %GUID_MAX_POWER_SAVINGS%, %DC%, 1
+Default     = %GUID_TYP_POWER_SAVINGS%, %AC%, 3
+Default     = %GUID_TYP_POWER_SAVINGS%, %DC%, 3
+Default     = %GUID_MIN_POWER_SAVINGS%, %AC%, 5
+Default     = %GUID_MIN_POWER_SAVINGS%, %DC%, 5
+
+[DptfPolicyCoolingAcousticsLimitDppeSettings]
+SubGroup    = %GUID_DPTF_GROUP%
+Setting     = %GUID_DPTF_ACSLIMIT%,"Acoustics Limit","Specify the acoustics cooling limit for Intel(R) Dynamic Platform and Thermal Framework"
+ValueRange  = 1, 5, 1, "Level"
+Default     = %GUID_MAX_POWER_SAVINGS%, %AC%, 1
+Default     = %GUID_MAX_POWER_SAVINGS%, %DC%, 1
+Default     = %GUID_TYP_POWER_SAVINGS%, %AC%, 3
+Default     = %GUID_TYP_POWER_SAVINGS%, %DC%, 3
+Default     = %GUID_MIN_POWER_SAVINGS%, %AC%, 5
+Default     = %GUID_MIN_POWER_SAVINGS%, %DC%, 5
+
+; The default config TDP AC/DC settings are index 0, they will be overwritten when the config TDP service is started 
+[DptfPolicyConfigTdpLevelDppeSettings]
+SubGroup    = %GUID_DPTF_GROUP%
+Setting     = %GUID_DPTF_CONFIGTDP_LEVEL%,"Config TDP Level","Specify the Config TDP Level for Intel(R) Dynamic Platform and Thermal Framework"
+Value       = 0, "High TDP", "Configure High TDP Level", %REG_DWORD%, 0
+Value       = 1, "Nominal TDP", "Configure Nominal TDP Level", %REG_DWORD%, 1
+Value       = 2, "Low TDP", "Configure Low TDP Level", %REG_DWORD%, 2
+Default     = %GUID_MAX_POWER_SAVINGS%, %AC%, 0
+Default     = %GUID_MAX_POWER_SAVINGS%, %DC%, 0
+Default     = %GUID_TYP_POWER_SAVINGS%, %AC%, 0
+Default     = %GUID_TYP_POWER_SAVINGS%, %DC%, 0
+Default     = %GUID_MIN_POWER_SAVINGS%, %AC%, 0
+Default     = %GUID_MIN_POWER_SAVINGS%, %DC%, 0
+
+[DptfPolicyLpmModeDppeSettings]
+SubGroup    = %GUID_DPTF_GROUP%
+Setting     = %GUID_DPTF_LPM_MODE%,"Low Power Mode Setting","Specify the Lower Power Mode setting for Intel(R) Dynamic Platform and Thermal Framework"
+Value       = 0, "Disabled", "Disable LPM Mode", %REG_DWORD%, 0
+Value       = 1, "App Specific", "Set Application Specific LPM Mode", %REG_DWORD%, 1
+Value       = 2, "LPM Set Index 2", "Set LPM Index 2", %REG_DWORD%, 2
+Value       = 3, "LPM Set Index 3", "Set LPM Index 3", %REG_DWORD%, 3
+Default     = %GUID_MAX_POWER_SAVINGS%, %AC%, 0
+Default     = %GUID_MAX_POWER_SAVINGS%, %DC%, 0
+Default     = %GUID_TYP_POWER_SAVINGS%, %AC%, 0
+Default     = %GUID_TYP_POWER_SAVINGS%, %DC%, 0
+Default     = %GUID_MIN_POWER_SAVINGS%, %AC%, 0
+Default     = %GUID_MIN_POWER_SAVINGS%, %DC%, 0
+
+[DptfPolicyHdcEnableDppeSettings]
+SubGroup    = %GUID_DPTF_GROUP%
+Setting     = %GUID_DPTF_HDC_ENABLE%,"HDC Setting","Enables Hardware Duty Cycling for Intel(R) Dynamic Platform and Thermal Framework"
+Value       = 0, "Disabled", "Disable Hardware Duty Cycling", %REG_DWORD%, 0
+Value       = 1, "Enabled", "Enable Hardware Duty Cycling", %REG_DWORD%, 1
+Default     = %GUID_MAX_POWER_SAVINGS%, %AC%, 0
+Default     = %GUID_MAX_POWER_SAVINGS%, %DC%, 1
+Default     = %GUID_TYP_POWER_SAVINGS%, %AC%, 0
+Default     = %GUID_TYP_POWER_SAVINGS%, %DC%, 1
+Default     = %GUID_MIN_POWER_SAVINGS%, %AC%, 0
+Default     = %GUID_MIN_POWER_SAVINGS%, %DC%, 1
+
+;----------------------------------------------------------------------
+; Strings and Constants
+;----------------------------------------------------------------------
+
+[Strings]
+SERVICE_DEMAND_START  = 3
+SERVICE_KERNEL_DRIVER = 1
+SERVICE_ERROR_NORMAL  = 1
+
+INTEL = "Intel"
+ClassName = "Intel(R) Dynamic Platform and Thermal Framework"
+DiskName = "Intel(R) Dynamic Platform and Thermal Framework"
+
+INT3400.DeviceDesc = "Intel(R) Dynamic Platform and Thermal Framework Manager"
+DisplayName="Windows Driver Foundation - User-mode Driver Framework Reflector"
+
+REG_DWORD                       = 0x00010001
+REG_MULTI_SZ                    = 0x00010000
+REG_EXPAND_SZ                   = 0x00020000
+REG_SZ                          = 0x00000000
+
+AC                              = 0
+DC                              = 1
+
+GUID_MAX_POWER_SAVINGS          = "{a1841308-3541-4fab-bc81-f71556f20b4a}"  ; Power Saver mode
+GUID_TYP_POWER_SAVINGS          = "{381b4222-f694-41f0-9685-ff5bb260df2e}"  ; Balanced
+GUID_MIN_POWER_SAVINGS          = "{8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c}"  ; High Performance
+
+GUID_DPTF_GROUP                 = "{48df9d60-4f68-11dc-8314-0800200c9a66}"
+GUID_DPTF_PWRLIMIT              = "{4a44b800-4f72-11dc-8314-0800200c9a66}"
+GUID_DPTF_ACSLIMIT              = "{63c39116-4f72-11dc-8314-0800200c9a66}"
+GUID_DPTF_CONFIGTDP_LEVEL       = "{07029cd8-4664-4698-95d8-43b2e9666596}"
+GUID_DPTF_LPM_MODE              = "{b29c73e0-1a8b-46fd-b4ae-1ce5a3d6d871}"
+GUID_DPTF_HDC_ENABLE			= "{e6902942-b0cf-41f2-9225-20839490eb8c}"
+
+;----------------------------------------------------------------------
+;Strings/Constants specific to ESIF UF Service
+;----------------------------------------------------------------------
+
+SERVICE_WIN32_OWN_PROCESS = 0x00000010
+SERVICE_AUTO_START = 0x2
+
+FLG_ADDREG_TYPE_SZ = 0x00000000
+FLG_ADDREG_TYPE_DWORD = 0x00010001
+
+COPYFLG_NOSKIP = 0x00000002
+DELFLG_IN_USE = 0x00000001
+
+ProductMessageKey="application\DPTF"
+ServiceDisplayName="ESIF Upper Framework Service"
+ServiceDescription="ESIF Upper Framework Service"
+ServiceFile="esif_uf.exe"
+DvDir="\ServiceProfiles\LocalService\AppData\Local\Intel\DPTF"
+DspDir="dsp"
+InstallDir="Intel\DPTF"

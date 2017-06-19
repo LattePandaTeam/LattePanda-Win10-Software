@@ -1,0 +1,85 @@
+;/*++
+;
+;
+;Copyright (c) 2009-2012  Intel Corporation
+;
+;Module Name:
+; IntelBatteryManagement.inf
+;
+;Abstract:
+;    INF file for installing the Battery Management driver 
+;
+;--*/
+
+[Version]
+Signature="$WINDOWS NT$"
+Class = Battery 
+ClassGuid={72631e54-78a4-11d0-bcf7-00aa00b7b32a}
+Provider=%ManufacturerName%
+CatalogFile=IntelBatteryManagement.cat
+DriverVer=12/02/2015,604.10146.2444.9650
+
+
+
+
+;*****************************************
+; Install Section
+;*****************************************
+
+[Manufacturer]
+%ManufacturerName%=Standard,NTamd64,NTx86
+
+[Standard.NTamd64]
+%IntelBatteryManagement.DeviceDesc%=IntelBatteryManagement_Device, ACPI\INT33FE
+[Standard.NTx86]
+%IntelBatteryManagement.DeviceDesc%=IntelBatteryManagement_Device, ACPI\INT33FE
+
+[IntelBatteryManagement_Device.NT]
+CopyFiles=Drivers_Dir
+Include=battery.inf
+Needs=Battery_Inst
+Reboot
+
+[IntelBatteryManagement_Device.NT.HW]
+;AddReg=IntelBatteryManagement_Device.NT.AddReg
+
+[Drivers_Dir]
+IntelBatteryManagement.sys
+
+
+;-------------- Service installation
+[IntelBatteryManagement_Device.NT.Services]
+AddService = IntelBatteryManagement,%SPSVCINST_ASSOCSERVICE%, IntelBatteryManagement_Service_Inst
+
+; -------------- IntelBatteryManagement driver install sections
+[IntelBatteryManagement_Service_Inst]
+DisplayName    = %IntelBatteryManagement.SVCDESC%
+ServiceType    = 1               ; SERVICE_KERNEL_DRIVER
+StartType      = 3               ; SERVICE_DEMAND_START
+ErrorControl   = 1               ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %12%\IntelBatteryManagement.sys
+LoadOrderGroup = Extended Base
+
+
+
+[SourceDisksNames]
+1 = %DiskName%,,,""
+
+[SourceDisksFiles]
+IntelBatteryManagement.sys = 1,,
+
+[DestinationDirs]
+DefaultDestDir = 12
+
+;----------------------------------------------------------------------
+;	Strings
+;----------------------------------------------------------------------
+
+[Strings]
+SPSVCINST_ASSOCSERVICE= 0x00000002
+MINTEL = "Intel Corporation"
+ManufacturerName="Intel Corporation" ;
+ClassName="Battery Management" ; 
+DiskName = "IntelBatteryManagement Installation Disk"
+IntelBatteryManagement.DeviceDesc = "Intel(R) Battery Management Device"
+IntelBatteryManagement.SVCDESC = "Intel(R) Battery Management Service"

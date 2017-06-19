@@ -1,0 +1,106 @@
+;/*++
+;
+;Copyright (c) Microsoft Corporation.  All rights reserved.
+;
+;Module Name:
+;    SpbLTR.inf
+;
+;Abstract:
+;    INF file for installing the SpbLTR Driver
+;
+;Installation Notes: 
+;    Using Devcon: Type "devcon update SpbLTR.inf ACPI\LTER0303" to install
+;
+;--*/
+
+[Version]
+Signature   = "$Windows NT$"
+Class       = Sensor
+ClassGuid   = {5175D334-C371-4806-B3BA-71FD53C9258D}
+;Provider    = %MSFT%
+Provider    = %LITEON%
+;DriverVer   = 07/25/2008,0.0.0.1
+DriverVer=08/24/2015,10.29.6.759
+CatalogFile = SpbLTR.cat
+PnpLockDown = 1
+
+; =================== Manufacturer/Models sections =======================
+
+[Manufacturer]
+;%MSFT%                      = Microsoft,NT$ARCH$
+%LITEON%                      = LiteOn,NTamd64
+
+;[Microsoft.NT$ARCH$]
+[LiteOn.NTamd64]
+%SpbLTR.DeviceDesc% = SpbLTR_Install,ACPI\LTER0303
+
+; =================== SPB LTR Device ===========================
+
+[SpbLTR_Install.NT]
+CopyFiles       = UMDriverCopy
+AddProperty     = DriverPropertiesSection
+
+[SpbLTR_Install.NT.Services]
+AddService      = SpbLTR,0x00000002,SpbLTR_ServiceInstall
+
+[SpbLTR_Install.NT.CoInstallers]
+AddReg          = WUDF_CoInstallers_AddReg
+CopyFiles       = WUDF_CoInstallers_CopyFiles
+
+[SpbLTR_Install.NT.Wdf]
+UmdfService              = SpbLTR,UMDFSpbLTR_Install
+UmdfServiceOrder         = SpbLTR
+UmdfImpersonationLevel   = Impersonation
+
+UmdfDirectHardwareAccess = AllowDirectHardwareAccess
+
+; =================== UMDF Service Install section ===================
+
+[UMDFSpbLTR_Install]
+UmdfLibraryVersion      = 1.11.0
+ServiceBinary           = %12%\UMDF\SpbLTR.dll
+;DriverCLSID             = {182BBB15-88C0-4E9C-A16F-EB5CDBC226C8}
+DriverCLSID             = {6AFAEA24-8F13-4658-9F88-6F5FB801BBC5}
+
+[SpbLTR_ServiceInstall]
+DisplayName     = %SpbLTRDisplayName%
+ServiceType     = 1
+StartType       = 3
+ErrorControl    = 1
+ServiceBinary   = %12%\WUDFRd.sys
+StartName       = \Driver\WudfRd
+
+[SourceDisksFiles]
+SpbLTR.dll  = 1
+WudfUpdate_01011.dll = 1
+
+[SourceDisksNames]
+1 = %MediaDescription%
+
+[WUDF_CoInstallers_AddReg]
+HKR,,CoInstallers32,0x00010000,"WudfUpdate_01011.dll"
+
+[DestinationDirs]
+UMDriverCopy            = 12,UMDF
+WUDF_CoInstallers_CopyFiles  = 11
+
+[UMDriverCopy]
+SpbLTR.dll
+
+[WUDF_CoInstallers_CopyFiles]
+WudfUpdate_01011.dll
+
+; =================== Driver Property section ===================
+
+[DriverPropertiesSection]
+DeviceIcon,,,,"%SystemRoot%\system32\sensorscpl.dll,-1000"
+
+; =================== Generic ==================================
+
+[Strings]
+;MSFT                        = "Microsoft Corporation"
+LITEON                      = "LiteOn"
+MediaDescription            = "Ltr303"
+ClassName                   = "Ltr303"
+SpbLTRDisplayName = "Ltr303"
+SpbLTR.DeviceDesc = "Ltr303"

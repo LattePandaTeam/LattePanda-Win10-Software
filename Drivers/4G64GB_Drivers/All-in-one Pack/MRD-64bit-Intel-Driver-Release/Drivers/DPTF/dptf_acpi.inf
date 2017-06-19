@@ -1,0 +1,145 @@
+;-------------------------------------------------------------------------------
+; INTEL CONFIDENTIAL
+;
+; Copyright (c) 2013-2015 Intel Corporation All Rights Reserved 
+;
+; The source code contained or described herein and all documents related to 
+; the source code ("Material") are owned by Intel Corporation or its suppliers 
+; or licensors. Title to the Material remains with Intel Corporation or its 
+; suppliers and licensors. The Material contains trade secrets and proprietary 
+; and confidential information of Intel or its suppliers and licensors. The 
+; Material is protected by worldwide copyright and trade secret laws and treaty 
+; provisions. No part of the Material may be used, copied, reproduced, 
+; modified, published, uploaded, posted, transmitted, distributed, or 
+; disclosed in any way without Intel's prior express written permission.
+;
+; No license under any patent, copyright, trade secret or other intellectual 
+; property right is granted to or conferred upon you by disclosure or delivery 
+; of the Materials, either expressly, by implication, inducement, estoppel or 
+; otherwise. Any license under such intellectual property rights must be 
+; expressed and approved by Intel in writing.
+;------------------------------------------------------------------------------
+
+[Version] 
+Signature = "$WINDOWS NT$" 
+Class=DPTF
+ClassGUID={C3077FCD-9C3C-482f-9317-460712F23EFD}
+Provider=%INTEL% 
+CatalogFile=dptf_acpi.cat
+DriverVer=07/24/2015,8.1.10900.175
+
+;----------------------------------------------------------------------
+; File Information
+;----------------------------------------------------------------------
+
+[SourceDisksNames]
+1 = %DiskName%,,,""
+
+[SourceDisksFiles.amd64]
+dptf_acpi.sys=1,,
+WdfCoInstaller01011.dll=1,,
+
+[DestinationDirs]
+DefaultDestDir=12
+
+;-------------------------------------------------------------------------------
+; Class Section
+;-------------------------------------------------------------------------------
+
+[ClassInstall32]
+AddReg=DPTFClass_AddReg
+
+[DPTFClass_AddReg]
+HKR,,,,%ClassName%
+HKR,,Icon,,"-27"
+
+;-------------------------------------------------------------------------------
+; Manufacturer and Models Section
+;-------------------------------------------------------------------------------
+
+[Manufacturer]
+%INTEL%=INTEL, NTamd64
+
+[INTEL.NTamd64]
+%INT3401.DeviceDesc%  = DptfAcpi,ACPI\INT3401
+%INT3402.DeviceDesc%  = DptfAcpi,ACPI\INT3402
+%INT3403.DeviceDesc%  = DptfAcpi,ACPI\INT3403
+%INT3404.DeviceDesc%  = DptfAcpi,ACPI\INT3404
+%INT3406.DeviceDesc%  = DptfAcpi,ACPI\INT3406
+%INT3407.DeviceDesc%  = DptfAcpi,ACPI\INT3407
+%INT3408.DeviceDesc%  = DptfAcpi,ACPI\INT3408
+%INT3409.DeviceDesc%  = DptfAcpi,ACPI\INT3409
+%INT340A.DeviceDesc%  = DptfAcpi,ACPI\INT340A
+%INT340B.DeviceDesc%  = DptfAcpi,ACPI\INT340B
+%INT340C.DeviceDesc%  = DptfAcpi,ACPI\INT340C
+%INT343D.DeviceDesc%  = DptfAcpi,ACPI\INT343D
+
+;------------------------------------------------------------------------------
+; DptfAcpi
+;------------------------------------------------------------------------------
+
+[DptfAcpi.NTamd64]
+CopyFiles=CopyDriver
+
+[CopyDriver]
+dptf_acpi.sys,,,2
+
+[DptfAcpi.NTamd64.Services]
+AddService = dptf_acpi,2,DptfAcpiDriverService
+
+[DptfAcpiDriverService]
+ServiceType    = %SERVICE_KERNEL_DRIVER%
+StartType      = %SERVICE_DEMAND_START%
+ErrorControl   = %SERVICE_ERROR_NORMAL%
+ServiceBinary  = %12%\dptf_acpi.sys
+LoadOrderGroup = Base
+
+[DptfAcpi.NTamd64.Wdf]
+KmdfService = dptf_acpi, KMDFVersion
+
+[KMDFVersion]
+KmdfLibraryVersion = 1.11
+
+
+;----------------------------------------------------------------------
+; WDF Co-Installer Section
+;----------------------------------------------------------------------
+
+[DptfAcpi.NTamd64.CoInstallers]
+AddReg=CoInstaller_AddReg
+CopyFiles=CoInstaller_CopyFiles
+
+[CoInstaller_AddReg]
+HKR,,CoInstallers32,0x00010000, "WdfCoInstaller01011.dll,WdfCoInstaller"
+
+[CoInstaller_CopyFiles]
+WdfCoInstaller01011.dll
+
+;----------------------------------------------------------------------
+; Strings and Constants
+;----------------------------------------------------------------------
+
+[Strings]
+SERVICE_DEMAND_START  = 3
+SERVICE_KERNEL_DRIVER = 1
+SERVICE_ERROR_NORMAL  = 1
+
+INTEL = "Intel"
+ClassName = "Intel(R) Dynamic Platform and Thermal Framework"
+DiskName = "Intel(R) Dynamic Platform and Thermal Framework"
+
+INT3401.DeviceDesc  = "Intel(R) Dynamic Platform and Thermal Framework Processor Participant"
+INT3402.DeviceDesc  = "Intel(R) Dynamic Platform and Thermal Framework Memory Participant"
+INT3403.DeviceDesc  = "Intel(R) Dynamic Platform and Thermal Framework Generic Participant"
+INT3404.DeviceDesc  = "Intel(R) Dynamic Platform and Thermal Framework Fan Participant"
+INT3406.DeviceDesc  = "Intel(R) Dynamic Platform and Thermal Framework Display Participant"
+INT3407.DeviceDesc  = "Intel(R) Dynamic Platform and Thermal Framework Power Participant"
+INT3408.DeviceDesc  = "Intel(R) Dynamic Platform and Thermal Framework Wireless Participant"
+INT3409.DeviceDesc  = "Intel(R) Dynamic Platform and Thermal Framework Ambient Temperature Sensor Participant"
+INT340A.DeviceDesc  = "Intel(R) Dynamic Platform and Thermal Framework Storage Participant"
+INT340B.DeviceDesc  = "Intel(R) Dynamic Platform and Thermal Framework Participant for Intel(R) RealSense(TM) 3D Camera"
+INT340C.DeviceDesc  = "Intel(R) Dynamic Platform and Thermal Framework Thunderbolt Participant"
+INT343D.DeviceDesc  = "Intel(R) Dynamic Platform and Thermal Framework PCH SPT ACPI Participant"
+
+
+
