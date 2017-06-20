@@ -1,6 +1,6 @@
 # LattePanda v1.2 BIOS Beta
 ----------------
-**The special version bios (004-A) is for those software need running under the 32bit system.
+**The special version bios (004-A) is for those software need running under the 32bit system.**
 
 If you have LattePanda 2G/32GB  v1.2 and want to change it to 32bit system. please flash the DF-BI-7-S70CR200-CC34E-004-A(64bit to 32bit) first, then install the 32bit system.
 
@@ -8,7 +8,7 @@ Flash DF-BI-7-S70CR200-CC34E-004-C(32bit to 64bit) and roll back the BIOS to 64b
 
 ### What's new:
 
-**In LattePanda v1.2 CR200 Z8350, we put the auto-boot switch inside the BIOS setting.Find more as follows **
+**In LattePanda v1.2 CR200 Z8350, we put the auto-boot switch inside the BIOS setting.Find more as follows**
 
 
 ### How to switch on/off the Auto-boot function in LP v1.2:
