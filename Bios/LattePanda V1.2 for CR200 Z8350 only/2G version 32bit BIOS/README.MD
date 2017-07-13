@@ -3,6 +3,7 @@
 **The special version bios (004-A) is made for those software need running under the 32bit system.**
 
 If you have LattePanda 2G/32GB  v1.2 and want to change it to 32bit system. please flash the DF-BI-7-S70CR200-CC34E-004-A(64bit to 32bit) first, then install the 32bit system.
+How to install 32bit(x86) image http://www.lattepanda.com/docs/#How_to_re-install_LattePanda_Windows_system
 
 Flash DF-BI-7-S70CR200-CC34E-004-C(32bit to 64bit) and roll back the BIOS to 64bit if you want.
 
