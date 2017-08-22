@@ -7,7 +7,15 @@ Contains the following:
 - LattePanda v1.1 default BIOS Beta
 - LattePanda v1.2 default BIOS Beta
 
-**Note: LattePanda v1.1 default BIOS Beta can only use in LattePanda v1.1 which is using Z8350 CPU.And so on.**   
+**Note: LattePanda v1.1 default BIOS Beta can only use in LattePanda v1.1 which is using Z8350 CPU.And so on.**     
+  
+  
+### How to switch on/off the Auto-boot function in LP v1.1/v1.2:
+1.	Press [Esc] or [Del] once just boot up the system to enter the BIOS  
+2.Go into Boot->Machine Status AC/Battery In  
+3.Change it to Power On/Power Off
+  
+  
 ### How to Figure out the verison of your lattePanda
 
 You can distinguishing between both by the stick on the side of the board.  
@@ -16,10 +24,7 @@ S70CR110 Z8350 -> V1.1
 S70CR200 Z8350 -> V1.2  
 ![Z8350 stick.png](http://www.lattepanda.com/wp-content/uploads/2017/06/QQ图片20170608174921.png)
 
-### How to switch on/off the Auto-boot function in LP v1.1/v1.2:
-1.	Press [Esc] or [Del] once just boot up the system to enter the BIOS
-  2.Go into Boot->Machine Status AC/Battery In
-  3.Change it to Power On/Power Off
+
 
 
 ### Disclaimer:   
