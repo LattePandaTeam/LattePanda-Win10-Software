@@ -11,7 +11,7 @@ Contains the following:
   
   
 ### How to switch on/off the Auto-boot function in LP v1.1/v1.2:
-1.	Press [Esc] or [Del] once just boot up the system to enter the BIOS  
+1.Press [Esc] or [Del] once just boot up the system to enter the BIOS  
 2.Go into Boot->Machine Status AC/Battery In  
 3.Change it to Power On/Power Off
   
