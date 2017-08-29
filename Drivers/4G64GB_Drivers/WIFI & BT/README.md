@@ -1,4 +1,4 @@
-### How to Figure out the verison of your lattePanda
+### How to Figure out the version of your lattePanda
 You can distinguishing between both by the stick on the side of the board.  
 S70CR110/S70CR100 Z8300 -> V1.0    
 S70CR110 Z8350 -> V1.1   
