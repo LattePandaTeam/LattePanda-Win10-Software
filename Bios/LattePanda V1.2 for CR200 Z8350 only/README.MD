@@ -1,9 +1,9 @@
 # LattePanda v1.2 BIOS Beta
 ----------------
 ### What's new:
-**We release a 10" display for LattePanda, all v1.2 version LP can use this new display after flash the new BIOS**  
-**In LattePanda v1.2 CR200 Z8350, we put the auto-boot switch inside the BIOS setting.Find more as follows **
-
+**We release a 10" display for LattePanda, all v1.2 version LP can use this new display after flash the new BIOS**
+  
+**In LattePanda v1.2 CR200 Z8350, we put the auto-boot switch inside the BIOS setting.Find more as follows**    
 
 ### How to switch on/off the Auto-boot function in LP v1.2:
 1.	Press [Esc] or [Del] once just boot up the system to enter the BIOS
