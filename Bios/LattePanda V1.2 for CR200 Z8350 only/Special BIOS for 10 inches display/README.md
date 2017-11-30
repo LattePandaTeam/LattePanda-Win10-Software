@@ -1,9 +1,9 @@
 ### Before you start:
-Please download and read the "How to use the 10“ display" first before you test the 10 inches display. An operation error may damage the board and display both.
+**Please download and read the "How to use the 10“ display" first before you test the 10 inches display. An operation error may damage the board and display both.**
 
 ### What's new
 2017/11/30-
-**We release a special BIOS for LP 10" display** 
+**We release a special BIOS for LP 10" display**   
 And because it is a portrait dislpay so we total made two different direction for the LOGO to  adapte your project.
 
 ### Disclaimer:   
