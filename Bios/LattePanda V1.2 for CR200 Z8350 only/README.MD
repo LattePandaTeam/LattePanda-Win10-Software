@@ -1,6 +1,7 @@
 # LattePanda v1.2 BIOS Beta
 ----------------
 ### What's new:
+**We release a 10" display for LattePanda, all v1.2 version LP can use this new display after flash the new BIOS**
 **In LattePanda v1.2 CR200 Z8350, we put the auto-boot switch inside the BIOS setting.Find more as follows **
 
 
