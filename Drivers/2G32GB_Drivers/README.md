@@ -10,7 +10,7 @@ Contains the following:
 
 1. Download the right driver package.
 2. Unzip the driver pack and copy the "CHT T3 MRD PR2 Driver WW51.2" folder to "C:\"  
-   ![Folder](images/Folder.PNG)   
+   ![Folder](../images/Folder.PNG)   
 3. Open CMD from Windows system.   
    *  Click on Home button
    *  Search "CMD" or "Command Prompt"
