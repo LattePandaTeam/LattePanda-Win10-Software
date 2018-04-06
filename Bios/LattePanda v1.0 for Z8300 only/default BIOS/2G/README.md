@@ -7,7 +7,7 @@ Ensure that you have saved the Windows product key code and you have an SPI chip
 
 ### How to refresh the LattePanda BIOS:
 
-1. Format your U-disk to FAT32
+1. Format your USB disk to FAT32 and change the drive name to "WINPE"
 2. Copy the right BIOS files directly to root of the USB flash disk
 3. Plug the U-disk in USB host
 4. Plugin the MicroUSB cable and power on the system
