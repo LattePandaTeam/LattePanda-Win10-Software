@@ -45,6 +45,11 @@ Ensure that you have saved the Windows product key code and you have an SPI chip
 7. Restart the system via pressing the reset button or "Ctrl+Alt+Del". Then finish refreshing.
   Note: make sure that remove the U-disk before restarting the system!
 
+If you have any problem in the process please check this video from Raducki Frédéric 
+https://youtu.be/du1BuDCn1WQ
+Thank Fred for the contribution of BIOS flashing tutorial video
+
+
 Checkout the [LattePanda official docs for more tutorials](http://www.lattepanda.com/docs) 
 
 ## FAQ
