@@ -1,5 +1,9 @@
 # LattePanda_BIOS_For_Ubuntu
 
+Note: This BIOS is only for all **CR200 z8350**. Find your sticky paper on LattePanda board to check the version. 
+
+![z8350 mark](https://i.imgur.com/w1Ys5eG.png)
+
 ### How to switch on/off the Auto-boot function in LP v1.2:
 
 1. Press [Esc] or [Del] once just boot up the system to enter the BIOS
