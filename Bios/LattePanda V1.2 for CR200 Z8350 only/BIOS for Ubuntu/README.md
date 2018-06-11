@@ -24,7 +24,7 @@ Contains the following:
 
 4. Plugin the MicroUSB cable and power on the system
 
-5. Wait the refreshing the BIOS automatically until returning "fs1:\>"![Refresh BIOS successfully.jpg](http://www.lattepanda.com/wp-content/uploads/2016/04/Refresh-BIOS-successfully.jpg)
+5. Wait the refreshing the BIOS automatically until returning "fs1:\>"![Refresh BIOS successfully.jpg](https://i.imgur.com/L8j7lD3.jpg)
 
 6. Unplug the USB flash disk!
 
