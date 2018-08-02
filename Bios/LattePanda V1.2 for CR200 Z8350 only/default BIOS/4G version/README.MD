@@ -1,5 +1,5 @@
 **003-B:**  
-2017/6 
+2017/6   
 **Add the default version for LP V1.2 4G**  
 
 **003-D:**                     
