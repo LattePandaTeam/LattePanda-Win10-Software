@@ -1,6 +1,6 @@
 **CC34F:**  
 2018/7  
-**release stable version for CC34F**
+**Add the stable version for CC34F**
 
 **CC34E-C:**  
 2017/6/8  
