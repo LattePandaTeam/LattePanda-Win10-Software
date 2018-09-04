@@ -1,4 +1,8 @@
-**-C:**  
+**CC34F:**  
+2018/7  
+**release stable version for CC34F**
+
+**CC34E-C:**  
 2017/6/8  
 **Add the default version for LP V1.2 2G**
 
