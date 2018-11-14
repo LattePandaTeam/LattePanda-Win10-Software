@@ -6,7 +6,7 @@
 You can distinguishing between both by the stick on the side of the board.  
 S70CR200 Z8350   
 **CC55D/CC55E -> DF-BI-7-S70CR200-CC55D-003-XX  
-CC55F -> DF-BI-7-S70CR200-CC55F-022-XX**  
+CC55F/CC55G -> DF-BI-7-S70CR200-CC55F-022-XX**  
 
 ![Z8350 stick.png](http://www.lattepanda.com/wp-content/uploads/2017/06/QQ图片20170608174921.png)
   
