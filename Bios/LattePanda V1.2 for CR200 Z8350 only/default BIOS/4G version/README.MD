@@ -3,7 +3,8 @@ Press [Esc] or [Del] once just boot up the system to enter the BIOS
 Go into Boot->Machine Status AC/Battery In  
 Change it to Power On/Power Off  
 
-  
+   
+     
 
 
 ### How to Figure out the verison of your lattePanda
