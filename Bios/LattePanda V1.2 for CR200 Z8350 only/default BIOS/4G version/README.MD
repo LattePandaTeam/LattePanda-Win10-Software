@@ -10,9 +10,9 @@ CC55F/CC55G -> DF-BI-7-S70CR200-CC55F-022-XX**
 
 ![Z8350 stick.png](http://www.lattepanda.com/wp-content/uploads/2017/06/QQ图片20170608174921.png)
 ### How to switch on/off the Auto-boot function in LP v1.2:
-Press [Esc] or [Del] once just boot up the system to enter the BIOS
-Go into Boot->Machine Status AC/Battery In
-Change it to Power On/Power Off
+Press [Esc] or [Del] once just boot up the system to enter the BIOS  
+Go into Boot->Machine Status AC/Battery In  
+Change it to Power On/Power Off  
 
 **003-B:**  
 2017/6   
