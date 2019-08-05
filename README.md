@@ -3,9 +3,11 @@
 
 Contains the following:
 
-- LattePanda Bios Beta
-- LattePanda Windows 10 drivers
+- LattePanda V1.0 Bios Beta
+- LattePanda V1.0 Windows 10 drivers
 - LattePanda Sensor libraries and samples
+- LattePanda Alpha BIOS
+- LattePanda Delta BIOS
 
 ### To download, please click "Download ZIP"
 
