@@ -9,6 +9,7 @@ Alpha m3-8100y --> For Alpha 800s and Alpha 864s with Intel m3-8100y processor
 
 
 
+
 ### How to reflash BIOS for your LattePanda Alpha or Delta
 
 1. Format your USB drive to FAT32 and change the drive name to "WINPE";
