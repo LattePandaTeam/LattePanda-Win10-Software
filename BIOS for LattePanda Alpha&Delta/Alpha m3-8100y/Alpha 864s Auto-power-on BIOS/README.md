@@ -9,6 +9,22 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 7. Copy all file under **"EC-7-S70KR300_20190704"** to root directory of your USB Drive.
 8. Press ESC again to go into the BIOS menu. Navigate to **Save & Exit**. Under Boot Override choose **UEFI: Built-in EFI**;
 9. Input “ fsX:” then press “Enter” (X could be 1,2,3…); Then input “dir” then press “Enter” to check the file in the disk;
