@@ -2,8 +2,9 @@
 **Please download and read the "How to use the 10“ display" first before you test the 10 inches display. An operation error may damage the board and display both.**
 
 ### What's new
-2019/09/26- v1.3  
-**A demo version for whom have the blink problem when using the old 10" display bios**   
+2019/09/26-   
+**v1.3**     
+A demo version for whom have the blink problem when using the old 10" display bios
 
 2017/11/30-  
 **We release a special BIOS for LP 10" display**   
