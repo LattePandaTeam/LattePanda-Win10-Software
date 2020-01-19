@@ -42,7 +42,7 @@ Alpha m3-8100y  --> For Alpha 800s and Alpha 864s with Intel m3-8100y processor
 
    
 
-9. Use the “Tab” key to fast choose “AfuEfix64.efi” and “BS-7-S70KR200-K65A-B1A.Bin”, and Input “/p /b /n” . Then press “Enter” ;**(The files' name could be different according to the BIOS type you choosed)**
+9. Use the “Tab” key to fast choose “AfuEfix64.efi” and “BS-7-S70KR200-K65A-B1A.Bin”, and Input “/p /b /n” .(DON'T need to input "/p /b /n" if you are reflashing LattePanda Delta) Then press “Enter” ;**(The files' name could be different according to the BIOS type you choosed)**
 
    ![](https://www.lattepanda.com/wp-content/uploads/2019/08/Alpha-BIOS-reflash04.jpg)
 
