@@ -9,7 +9,7 @@ Contains the following:
 ### How to install:   
 
 1. Download the right driver package.
-2. Unzip the driver pack and copy the "CHT T3 MRD PR2 Driver WW51.2" folder to "C:\"  
+2. Unzip the driver pack and copy the "MRD-64bit-Intel-Driver-Release" folder to "C:\"  
    ![Folder](images/Folder.PNG)   
 3. Open CMD from Windows system.   
    *  Click on Home button
@@ -19,9 +19,9 @@ Contains the following:
              You WON'T install the drivers successfully without this step!!!  
 4. Start driver installation by running the following commands. 
    * cd C:\
-   * cd "CHT T3 MRD PR2 Driver WW51.2"
-   * cd Script
-   * Install.bat  
+   * cd "MRD-64bit-Intel-Driver-Release"
+   * cd Scripts
+   * install_DF_S70CR100.bat  
      ![Run CMD](https://github.com/LattePandaTeam/LattePanda-Win10-Software/blob/master/Drivers/images/Run%20CMD.PNG)  
 5. Accept "Install the driver software anyway" for Windows security warning.   
    ![Warning](https://github.com/LattePandaTeam/LattePanda-Win10-Software/blob/master/Drivers/images/Warning.PNG)  
