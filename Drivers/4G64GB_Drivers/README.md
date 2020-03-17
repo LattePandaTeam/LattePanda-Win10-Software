@@ -10,7 +10,7 @@ Contains the following:
 
 1. Download the right driver package.
 2. Unzip the driver pack and copy the "MRD-64bit-Intel-Driver-Release" folder to "C:\"  
-   ![Folder](images/Folder.PNG)   
+   ![drivers pack](https://github.com/LattePandaTeam/LattePanda-Win10-Software/blob/master/Drivers/images/drivers%20pack.png)
 3. Open CMD from Windows system.   
    *  Click on Home button
    *  Search "CMD" or "Command Prompt"
@@ -22,7 +22,7 @@ Contains the following:
    * cd "MRD-64bit-Intel-Driver-Release"
    * cd Scripts
    * install_DF_S70CR100.bat  
-     ![Run CMD](https://github.com/LattePandaTeam/LattePanda-Win10-Software/blob/master/Drivers/images/Run%20CMD.PNG)  
+     ![Command Prompt](https://github.com/LattePandaTeam/LattePanda-Win10-Software/blob/master/Drivers/images/Command%20Prompt.png) 
 5. Accept "Install the driver software anyway" for Windows security warning.   
    ![Warning](https://github.com/LattePandaTeam/LattePanda-Win10-Software/blob/master/Drivers/images/Warning.PNG)  
 6. Success to install the driver pack after 1-2 minutes.   
