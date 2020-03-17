@@ -22,7 +22,7 @@ Contains the following:
    * cd "MRD-64bit-Intel-Driver-Release"
    * cd Scripts
    * install_DF_S70CR100
-     ![Run CMD](https://github.com/LattePandaTeam/LattePanda-Win10-Software/blob/master/Drivers/images/Run%20CMD.PNG)  
+     ![Command Prompt](https://github.com/LattePandaTeam/LattePanda-Win10-Software/blob/master/Drivers/images/Command%20Prompt.png)  
 5. Accept "Install the driver software anyway" for Windows security warning.   
    ![Warning](https://github.com/LattePandaTeam/LattePanda-Win10-Software/blob/master/Drivers/images/Warning.PNG)  
 6. Success to install the driver pack after 1-2 minutes.   
