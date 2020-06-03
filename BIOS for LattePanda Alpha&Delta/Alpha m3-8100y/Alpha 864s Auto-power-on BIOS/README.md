@@ -6,7 +6,7 @@
 3. Plug the U-drive in USB host and boot the system; Press “ESC” and go into the BIOS setting page.
 4. Navigate to “Save & Exit”, choose "UEFI: Built-in EFI Shell" and press “Enter";
  ![](https://www.lattepanda.com/wp-content/uploads/2019/08/Alpha-BIOS-reflash01.jpg)
-5. Use the Tab key to select BIOS. NSH, and it will reflash automatically. Wait until it returns **"fs3:\CDJQ-BS-7-S70KR300-KF65A-101-J>"**;
+5. Use the Tab key to select BIOS.NSH, it will reflash automatically. Wait until it returns **"fs3:\CDJQ-BS-7-S70KR300-KF65A-101-J>"**;
  ![](https://www.lattepanda.com/wp-content/uploads/2020/06/8100Y-auto-BIOS-01.jpg)
  ![](https://www.lattepanda.com/wp-content/uploads/2020/06/8100Y-auto-BIOS-02.jpg)
 6. Shut down your LattePanda Alpha and unplug your USB drive;
