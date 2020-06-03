@@ -4,6 +4,7 @@
 2. Copy all the files under **"BS-7-S70KR300-KF65A-101-J"** to root directory of your USB Drive.
 3. Plug the U-drive in USB host and boot the system; Press “ESC” and go into the BIOS setting page.
 4. Navigate to “Save & Exit”, choose "UEFI: Built-in EFI Shell" and press “Enter";
+ ![](https://www.lattepanda.com/wp-content/uploads/2019/08/Alpha-BIOS-reflash01.jpg)
 5. se the Tab key to select BIOS. NSH, and it will reflash automatically. Wait until it returns "fs3:>";
 6. Shut down your LattePanda Alpha and unplug your USB drive;
 
