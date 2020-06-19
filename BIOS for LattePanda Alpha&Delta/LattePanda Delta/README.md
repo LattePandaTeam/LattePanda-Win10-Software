@@ -1,5 +1,13 @@
 # LattePanda Delta BIOS
 
+### How to know the version of your LattePanda Delta
+
+You can distinguishing by the stick on the back of the board.
+S70GR110  OR  S70GR200
+![Delta stick.png](https://www.lattepanda.com/wp-content/uploads/2020/06/Delta-version.jpg)
+
+
+
 Please check out this forum thread to find more instructions of how to reflash **Delta auto-power-on BIOS**.
 
 https://www.lattepanda.com/topic-f23t20946.html
