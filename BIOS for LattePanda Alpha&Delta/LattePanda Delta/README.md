@@ -4,7 +4,7 @@
 
 You can distinguishing by the S/N number stick on the back of the board.
 
-S70GR110  OR  S70GR200
+**S70GR110  OR  S70GR200**
 ![Delta stick.png](https://www.lattepanda.com/wp-content/uploads/2020/06/Delta-version.jpg)
 
 
