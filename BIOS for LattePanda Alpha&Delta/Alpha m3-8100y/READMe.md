@@ -1,4 +1,4 @@
-### How to know the version of my Alpha 8100y?
+### How to know the version of your Alpha 8100y?
 
 Pls check the S/N number label on the back of LattePanda board.
 
