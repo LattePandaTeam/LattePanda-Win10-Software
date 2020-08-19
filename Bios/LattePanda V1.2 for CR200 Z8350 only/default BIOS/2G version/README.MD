@@ -1,7 +1,8 @@
 **CC34F-101-B:**  
 2020/8
 **Add the newest version for CC34F**
-**Only suitable for LattePanda V1 2/32GB with Numbers greater than 20200527500001 on Barcode.**
+**Only suitable for LattePanda V1 2/32GB with S/N Numbers greater than X-S70CR200-CC34F-202300001 on Barcode.**
+
 
 **CC34F:**  
 2018/7  
