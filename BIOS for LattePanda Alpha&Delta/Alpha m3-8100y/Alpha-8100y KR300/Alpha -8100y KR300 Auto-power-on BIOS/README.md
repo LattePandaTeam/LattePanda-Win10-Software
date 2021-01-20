@@ -1,7 +1,7 @@
 ## HOW TO REFLASH BIOS
 
 1. Format your USB drive to FAT32 and change the drive name to "WINPE";
-2. Copy all the files under **"CDJQ-BS-7-S70KR300-KF65A-101-J"** to root directory of your USB Drive.
+2. Copy all the files under **"BS-7-S70KR300-KF65A-101-J"** to root directory of your USB Drive.
  ![](https://www.lattepanda.com/wp-content/uploads/2020/06/Untitled.png)
 3. Plug the U-drive in USB host and boot the system; Press “ESC” and go into the BIOS setting page.
 4. Navigate to “Save & Exit”, choose "UEFI: Built-in EFI Shell" and press “Enter";
