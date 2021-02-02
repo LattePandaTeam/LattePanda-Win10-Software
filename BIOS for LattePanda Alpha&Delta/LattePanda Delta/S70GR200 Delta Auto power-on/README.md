@@ -1,3 +1,6 @@
+###Update
+2021-02-02: add "(Compatible with LINUX)S70GR200 Delta Auto Power on" and solve some compatible issues with Linux.
+
 ### How to get Auto power-on feature on LattePanda Delta
 
 Please check out this forum thread to find more instructions of how to reflash **Delta auto-power-on BIOS**.
