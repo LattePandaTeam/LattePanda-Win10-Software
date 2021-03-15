@@ -1,6 +1,6 @@
 ### Update
 #### -2020.03.15  
-#### Update new Alpha 7y30 KR200 BIOS that supports touch in Linux.
+#### Update "(Linux Compatible) Alpha 864 KR200 Default BIOS" that supports touch in Linux.
 
 
 ## How to reflash BIOS for your LattePanda Alpha or Delta
