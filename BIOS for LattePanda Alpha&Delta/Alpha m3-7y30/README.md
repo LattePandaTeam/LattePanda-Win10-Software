@@ -1,5 +1,5 @@
 ### Update
-#### -2020.02.15  
+#### -2020.03.15  
 #### Update new Alpha 7y30 KR200 BIOS that supports touch in Linux.
 
 
