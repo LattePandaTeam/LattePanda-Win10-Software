@@ -1,6 +1,6 @@
 ### Update
 #### -2021.03.15   
-#### update new KR300 default BIOS that supports touch in Linux.
+#### update "(Linux compatible) Alpha-8100y KR300 Default BIOS" that supports touch in Linux.
 
 
 ## How to reflash BIOS for your LattePanda Alpha or Delta
