@@ -1,3 +1,7 @@
+**Update**
+-2021.03.15   update new KR300 default BIOS that supports touch in Linux.
+
+
 How to reflash BIOS for your LattePanda Alpha or Delta
 Format your USB drive to FAT32 and change the drive name to "WINPE";
 
