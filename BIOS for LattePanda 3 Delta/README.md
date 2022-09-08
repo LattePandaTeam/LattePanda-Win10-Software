@@ -2,10 +2,10 @@
 
 ## BIOS Information
 
-Build Date:	2022/08/15
-BIOS name:	LP-BS-7-S70JR120-CN51G-D_20220815113420.bin
-Checksum:	38B2
-BIOS Message:	LP-BS-7-S70JR120-CN51G-D BIOS Date: 08/15/2022 11:34:19
+* Build Date:	2022/08/15
+* BIOS name:	LP-BS-7-S70JR120-CN51G-D_20220815113420.bin
+* Checksum:	38B2
+* BIOS Message:	LP-BS-7-S70JR120-CN51G-D BIOS Date: 08/15/2022 11:34:19
 
 ## Update Record
 
