@@ -1,3 +1,10 @@
+### **Update**
+
+LP-BS-10-S70CR200-CC55F-101-A-64bit  -- **2022.10**
+
+- Modify the maximum backlight brightness
+- Support 64bit OS
+
 ## **How to know the version of your LattePanda 4GB/64GB:**  
 
 2020/9
