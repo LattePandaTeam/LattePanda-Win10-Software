@@ -1,6 +1,7 @@
 ### **Update**
 
 2022.10
+
 LP-BS-10-S70CR200-CC34F-101-A-64bit
 
 - Modify the maximum backlight brightness
