@@ -1,13 +1,17 @@
-# LattePanda Alpha & Delta -- BIOS
+# LattePanda-Win10-Software
+----------------
 
+Contains the following:
 
+- LattePanda V1.0 Bios Beta
+- LattePanda V1.0 Windows 10 drivers
+- LattePanda Sensor libraries and samples
+- LattePanda Alpha BIOS
+- LattePanda Delta BIOS
 
-**NOTE: Please choose the right BIOS file according to your LattePanda Model.**
+### To download, please click "Download ZIP"
 
-Alpha m3-7y30    --> For Alpha 800 and Alpha 864 with Intel m3-7y30 processor 
+Follow us on Twitter for updates and more information: https://twitter.com/LattePandaCN
 
-Alpha m3-8100y  --> For Alpha 800s and Alpha 864s with Intel m3-8100y processor
-
-
-
+Designed by Cain, Kelvin and Lauren for LattePanda
 
