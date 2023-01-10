@@ -11,13 +11,13 @@
 
 5. Navigate to “**Save & Exit**”, Select the “**UEFI: Built-in EFI Shell**” in Boot Override and press “Enter” ;
 
-   ![](https://www.lattepanda.com/wp-content/uploads/2019/08/Alpha-BIOS-reflash01.jpg)
+   ![](https://img.dfrobot.com.cn/wiki/5d7073afb7c3fa38ec48cda1/b77a4f2a4856f0e42f5a2ce0ec3bbb7b.jpg)
 
    
 
 6. Wait few seconds until the page shows “Shell>”;
 
-   ![](https://www.lattepanda.com/wp-content/uploads/2019/08/Alpha-BIOS-reflash02.jpg)
+   ![](https://img.dfrobot.com.cn/wiki/5d7073afb7c3fa38ec48cda1/b77a4f2a4856f0e42f5a2ce0ec3bbb7b.jpg)
 
    
 
@@ -25,13 +25,13 @@
 
 8. Input “dir” then press “Enter” to check the file in the disk;
 
-   ![](https://www.lattepanda.com/wp-content/uploads/2019/08/Alpha-BIOS-reflash03.jpg)
+   ![](https://img.dfrobot.com.cn/wiki/5d7073afb7c3fa38ec48cda1/6c1750ffd5d62b829e64a480d7aa26e8.jpg)
 
    
 
 9. Use the “Tab” key to fast choose “AfuEfix64.efi” and “BS-7-S70KR200-K65A-B1A.Bin”, and Input “/p /b /n” .(DON'T need to input "/p /b /n" if you are reflashing LattePanda Delta) Then press “Enter” ;**(The files' name could be different according to the BIOS type you choosed)**
 
-   ![](https://www.lattepanda.com/wp-content/uploads/2019/08/Alpha-BIOS-reflash04.jpg)
+   ![](https://img.dfrobot.com.cn/wiki/5d7073afb7c3fa38ec48cda1/0c25120975dc1ab56e239989c06465a9.jpg)
 
    
 
@@ -43,13 +43,13 @@
 
 13. Type in **eFuitX64.efi /u EC-7-S70KR200-K65A-B1A.bin** and press enter; (you can also use “Tab” to choose the file)
 
-    ![](https://www.lattepanda.com/wp-content/uploads/2019/08/Alpha-BIOS-reflash05.jpg)
+    ![](https://img.dfrobot.com.cn/wiki/5d7073afb7c3fa38ec48cda1/4a88c315e45d38b8963c5c52c22d867c.jpg)
 
     
 
 14. ITE Flash Utility will load and do flashing. Wait until it says **Update EC Rom successfully!**
 
-    ![](https://www.lattepanda.com/wp-content/uploads/2019/08/Alpha-BIOS-reflash06.jpg)
+    ![](https://img.dfrobot.com.cn/wiki/5d7073afb7c3fa38ec48cda1/b71e2c69a6f8c3442a7b951ed265f845.jpg)
 
     
 
