@@ -6,7 +6,7 @@ S/N: <u>S70KR300</u> --> **Alpha 8100y KR300**
 
 S/N: <u>S70KR310</u> --> **Alpha 8100y KR310**
 
-![](https://www.lattepanda.com/wp-content/uploads/2020/08/Alpha-KR300-.jpg)
+![](https://img.dfrobot.com.cn/wiki/5d7073afb7c3fa38ec48cda1/b1a9890a495635d5e28f2fd70b671cd1.jpg)
 
 
 
