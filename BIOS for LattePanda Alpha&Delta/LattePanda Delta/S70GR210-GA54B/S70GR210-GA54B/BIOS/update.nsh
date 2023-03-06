@@ -1,0 +1,1 @@
+fpt64.efi -f CDJQ-BI-7-S70GR200-I(VB6).bin
