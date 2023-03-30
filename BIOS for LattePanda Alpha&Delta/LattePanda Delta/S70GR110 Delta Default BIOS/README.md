@@ -10,13 +10,13 @@
 
 5. Navigate to “**Save & Exit**”, Select the “**UEFI: Built-in EFI Shell**” in Boot Override and press “Enter” ;
 
-   ![](https://www.lattepanda.com/wp-content/uploads/2019/08/Alpha-BIOS-reflash01.jpg)
+   ![](https://github.com/LattePandaTeam/Docs/blob/master/assets/images/Alpha_BIOS_Tutorial/Alpha-BIOS-reflash01.jpg)
 
    
 
 6. Wait few seconds until the page shows “Shell>”;
 
-   ![](https://www.lattepanda.com/wp-content/uploads/2019/08/Alpha-BIOS-reflash02.jpg)
+   ![](https://github.com/LattePandaTeam/Docs/blob/master/assets/images/Alpha_BIOS_Tutorial/Alpha-BIOS-reflash02.jpg)
 
    
 
@@ -24,13 +24,13 @@
 
 8. Input “dir” then press “Enter” to check the file in the disk;
 
-   ![](https://www.lattepanda.com/wp-content/uploads/2019/08/Alpha-BIOS-reflash03.jpg)
+   ![](https://github.com/LattePandaTeam/Docs/blob/master/assets/images/Alpha_BIOS_Tutorial/Alpha-BIOS-reflash03.jpg)
 
    
 
 9. Use the “Tab” key to fast choose “AfuEfix64.efi” and “BS-7-S70KR200-K65A-B1A.Bin”, and Input “/p /b /n” .(DON'T need to input "/p /b /n" if you are reflashing LattePanda Delta) Then press “Enter” ;**(The files' name could be different according to the BIOS type you choosed)**
 
-   ![](https://www.lattepanda.com/wp-content/uploads/2019/08/Alpha-BIOS-reflash04.jpg)
+   ![](https://github.com/LattePandaTeam/Docs/blob/master/assets/images/Alpha_BIOS_Tutorial/Alpha-BIOS-reflash04.jpg)
 
    
 
@@ -42,13 +42,13 @@
 
 13. Type in **eFuitX64.efi /u EC-7-S70KR200-K65A-B1A.bin** and press enter; (you can also use “Tab” to choose the file)
 
-    ![](https://www.lattepanda.com/wp-content/uploads/2019/08/Alpha-BIOS-reflash05.jpg)
+    ![](https://github.com/LattePandaTeam/Docs/blob/master/assets/images/Alpha_BIOS_Tutorial/Alpha-BIOS-reflash05.jpg)
 
     
 
 14. ITE Flash Utility will load and do flashing. Wait until it says **Update EC Rom successfully!**
 
-    ![](https://www.lattepanda.com/wp-content/uploads/2019/08/Alpha-BIOS-reflash06.jpg)
+    ![](https://github.com/LattePandaTeam/Docs/blob/master/assets/images/Alpha_BIOS_Tutorial/Alpha-BIOS-reflash06.jpg)
 
     
 
