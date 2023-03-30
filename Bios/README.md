@@ -21,8 +21,7 @@ You can distinguishing between both by the stick on the side of the board.
 S70CR110/S70CR100 Z8300 -> V1.0    
 S70CR110 Z8350 -> V1.1   
 S70CR200 Z8350 -> V1.2  
-![Z8350 stick.png](http://www.lattepanda.com/wp-content/uploads/2017/06/QQ图片20170608174921.png)
-
+![Z8350 stick.png](/assets/images/8350-sticker.png)
 
 
 
@@ -40,7 +39,7 @@ Ensure that you have saved the Windows product key code and you have an SPI chip
 2. Copy the right BIOS files directly to root of the USB flash disk
 3. Plug the U-disk in USB host
 4. Plugin the MicroUSB cable and power on the system
-5. Wait the refreshing the BIOS automatically until returning "fs1:\>" (Check the “![Refresh BIOS successfully.jpg](http://www.lattepanda.com/wp-content/uploads/2016/04/Refresh-BIOS-successfully.jpg)”)
+5. Wait the refreshing the BIOS automatically until returning "fs1:\>" (Check the “![Refresh BIOS successfully.jpg](/assets/images/LP V1/V1_BIOS/Refresh-BIOS-successfully.jpg)”)
 6. Unplug the U-disk!
 7. Restart the system via pressing the reset button or "Ctrl+Alt+Del". Then finish refreshing.
   Note: make sure that remove the U-disk before restarting the system!
@@ -56,7 +55,7 @@ Checkout the [LattePanda official docs for more tutorials](http://www.lattepanda
 
 If you have any question or failed to refresh the bios, please check out this official forum thread to find more details (contributed by @flyingpoutine)
 
-http://www.lattepanda.com/forum/viewtopic.php?f=10&t=1306&sid=4c16e0430ee1a46c2ebba837383c3930
+https://www.lattepanda.com/forum/topic/313292
 
 And feel free to post your questions there. 
 
