@@ -21,6 +21,7 @@ You can distinguishing between both by the stick on the side of the board.
 S70CR110/S70CR100 Z8300 -> V1.0    
 S70CR110 Z8350 -> V1.1   
 S70CR200 Z8350 -> V1.2  
+
 ![Z8350 stick.png](/assets/images/8350-sticker.png)
 
 
