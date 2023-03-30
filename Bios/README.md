@@ -22,7 +22,7 @@ S70CR110/S70CR100 Z8300 -> V1.0
 S70CR110 Z8350 -> V1.1   
 S70CR200 Z8350 -> V1.2  
 
-![Z8350 stick.png](/assets/images/8350-sticker.png)
+![](https://github.com/LattePandaTeam/Docs/blob/master/assets/images/8350-sticker.png)
 
 
 
@@ -41,7 +41,8 @@ Ensure that you have saved the Windows product key code and you have an SPI chip
 3. Plug the U-disk in USB host
 4. Plugin the MicroUSB cable and power on the system
 5. Wait the refreshing the BIOS automatically until returning "fs1:\>" (Check the “Refresh BIOS successfully”)
-https://github.com/LattePandaTeam/Docs/blob/master/assets/images/LP%20V1/V1_BIOS/Refresh-BIOS-successfully.jpg
+
+![](https://github.com/LattePandaTeam/Docs/blob/master/assets/images/LP%20V1/V1_BIOS/Refresh-BIOS-successfully.jpg)
 
 7. Unplug the U-disk!
 8. Restart the system via pressing the reset button or "Ctrl+Alt+Del". Then finish refreshing.
