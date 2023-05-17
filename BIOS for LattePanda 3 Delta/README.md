@@ -37,6 +37,18 @@ This changes the SATA III lane in M.2 B Key to the PCIe x1  lane. So if you want
 * Change the SATA III lane in M.2 B Key to the PCIe x1  lane
 
 
+## BIOS for Ubuntu system
+To solve the boot loop issue for Ubuntu system on LattePanda 3 Delta, we made some changes to the BIOS.
+
+ ### BIOS Information
+
+* BIOS Name:	LP-BS-7-S70JR120-CN51G-D-UBT-ON
+
+BIOS change list:
+
+- Removed the module in the BIOS that fixed the boot order;
+- Add auto-power-on feature(if you don’t need this feature, pls set to default settings by this tutorial).
+
 
 #### To download, please click "Download ZIP"
 
