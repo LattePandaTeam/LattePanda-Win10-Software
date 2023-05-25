@@ -1,8 +1,10 @@
-# LattePanda 3 Delta BIOS File
+# LattePanda 3 Delta BIOS Firmware
 
-## Default BIOS
 
-This is used for mass production. Your board uses this BIOS firmware.
+
+## Default BIOS (S70JR120-CN51G-D)
+
+This is used for mass production. Your board uses this BIOS firmware by default.
 
 ### BIOS Information
 
@@ -21,38 +23,77 @@ This is used for mass production. Your board uses this BIOS firmware.
 * Change the reading method of the MAC address
 * Add Windows Recovery function, shortcut key F9
 
-## Optional BIOS
+### Optional BIOS (S70JR120-CN51G-D-ON_PCIE)
 
-This changes the SATA III lane in M.2 B Key to the PCIe x1  lane. So if you want to use the  PCIe signal in M.2 B key slot, please reflash your board with this BIOS firmware.
+Based on the S70JR120-CN51G-D BIOS version, this changes the SATA III lane in M.2 B Key to the PCIe x1 lane . So if you want to use the  PCIe signal in M.2 B key slot, please reflash your board with this BIOS firmware.
 
-### BIOS Information
+#### BIOS Information
 
 * Build Date:	2022/11/02
 * BIOS Name:	LP-BS-7-S70JR120-CN51G-D-ON_PCIE_20221102163320.bin
 * Checksum:	CF92
 * BIOS Message:	LP-BS-7-S70JR120-CN51G-D-ON_PCIE BIOS Date: 11/02/2022 16:33:20
 
-###  Update Record
+####  Update Record
 
 * Change the SATA III lane in M.2 B Key to the PCIe x1  lane
 
+  
 
-## BIOS for Ubuntu system
-To solve the boot loop issue for Ubuntu system on LattePanda 3 Delta, we made some changes to the BIOS.
+
+##  BIOS (S70JR120-CN51G-E)
+
+We fixed some issues reported by users and added new features to improve stability and usability.
 
 ### BIOS Information
 
-* BIOS Name:	LP-BS-7-S70JR120-CN51G-D-UBT-ON
+* Build Date:	2023/5/9
+* BIOS Name:	LP-BS-7-S70JR120-CN51G-E_20230509145749.bin
+* Checksum:	4C00
+* BIOS Message:	LP-BS-7-S70JR120-CN51G-E BIOS Date: 05/09/2023 14:57:49
 
 ###  Update Record
 
-- Removed the module in the BIOS that fixed the boot order;
-- Add auto-power-on feature(if you don’t need this feature, pls set to default settings by this tutorial).
+* Remove the fixed startup sequence to solve the boot loop issue for Ubuntu
+* add the Serial Port Console Redirection
+
+### Optional BIOS (S70JR120-CN51G-E-ON_PCIE)
+
+Based on the S70JR120-CN51G-E BIOS version, this changes the SATA III lane in M.2 B Key to the PCIe x1 lane . So if you want to use the PCIe signal in M.2 B key slot, please reflash your board with this BIOS firmware.
+
+#### BIOS Information
+
+* Build Date:	2023/05/22
+* BIOS Name:	LP-BS-7-S70JR120-CN51G-E_ON_PCIE_20230522101644.bin
+* Checksum:	3BB1
+* BIOS Message:	LP-BS-7-S70JR120-CN51G-E_ON_PCIE BIOS Date: 05/22/2023 10:16:44
+
+####  Update Record
+
+* Change the SATA III lane in M.2 B Key to the PCIe x1  lane
+
+### Optional BIOS (S70JR120-CN51G-E-T)
+
+Based on the S70JR120-CN51G-E BIOS version, this adds the voltage control of the RST pin of the eDP interface. If your eDP screen displays monochrome in a cycle, please reflash your board with this BIOS firmware. 
+
+#### BIOS Information
+
+* Build Date:	2023/05/18
+* BIOS Name:	LP-BS-7-S70JR120-CN51G-E-T_20230518150642.bin
+
+####  Update Record
+
+* Add: Advanced->Power Management-> Add GPP_D6 Output Level
+
+####  How to Set?
+After the reflash, reboot the board. Continuous press 'DEL' key to  enter into the BIOS setup, then choose Advanced -> Power Management -> GPP_D6 Output Level: LOW. Then save and exit. Reboot the board, you eDP screen should work fine now.
 
 
-#### To download, please click "Download ZIP"
 
-#### How to update the BIOS firmware?
+
+### To download, please click "Download ZIP"
+
+### How to update the BIOS firmware?
 
   Please see the tutorial: http://docs.lattepanda.com/content/3rd_delta_edition/bios/
 
