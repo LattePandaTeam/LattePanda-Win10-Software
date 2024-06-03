@@ -1,6 +1,6 @@
 # LattePanda 3 Delta BIOS Firmware
 
-## Default BIOS (S70JR200-CN51G-8G-A_20230907094723)
+## Default BIOS (S70JR200-CN51G-8G-A_20230907094723)  --Update 2023/09/07
 This is used for mass production. Your board uses this BIOS firmware by default.
 
 ### BIOS Information
@@ -15,7 +15,22 @@ This is used for mass production. Your board uses this BIOS firmware by default.
 
 * Added GPP_D6 level control option, default to low.
 
-## Default BIOS (S70JR120-CN51G-D)
+
+### Optional BIOS (S70JR200-CN51G-8G_A_PCIE_20240529134300)
+
+Based on the S70JR200-CN51G-8G-A_20230907094723 BIOS version, the SATA III lane in the M.2 B Key has been switched to the PCIe x1 lane. Therefore, if you wish to utilize the PCIe signal in the M.2 B Key slot, you should update your board with this BIOS firmware.
+
+#### BIOS Information
+
+* Build Date:	2024/05/29
+* BIOS Name:	LP-BS-7-S70JR200-CN51G-8G_A_PCIE_20240529134300.bin
+* BIOS Message:	LP-BS-7-S70JR200-CN51G-8G_A_PCIE_20240529134300 BIOS Date: 29/05/2024 13:43:00
+
+####  Update Record
+
+* Change the SATA III lane in M.2 B Key to the PCIe x1 lane
+
+## Default BIOS (S70JR120-CN51G-D)  -- Update 2022/08/15
 
 This is used for mass production. Your board uses this BIOS firmware by default.
 
@@ -49,7 +64,7 @@ Based on the S70JR120-CN51G-D BIOS version, this changes the SATA III lane in M.
 
 ####  Update Record
 
-* Change the SATA III lane in M.2 B Key to the PCIe x1  lane
+* Change the SATA III lane in M.2 B Key to the PCIe x1 lane
 
   
 
