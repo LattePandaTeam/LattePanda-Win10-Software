@@ -1,6 +1,19 @@
 # LattePanda 3 Delta BIOS Firmware
 
+## Default BIOS (S70JR200-CN51G-8G-A_20230907094723)
+This is used for mass production. Your board uses this BIOS firmware by default.
 
+### BIOS Information
+
+* Build Date:	2023/09/07
+* BIOS ROM: LP-BS-7-S70JR200-CN51G-8G-A_20230907094723.bin
+* CheckSum: 83A8
+* BIOS Message: LP-BS-7-S70JR200-CN51G-8G-A BIOS Date: 09/07/2023 09:47:23
+* BIOS Version：LP-BS-7-S70JR200-CN51G-8G-A
+
+###  Update Record
+
+* Added GPP_D6 level control option, default to low.
 
 ## Default BIOS (S70JR120-CN51G-D)
 
