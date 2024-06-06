@@ -1,36 +1,39 @@
 # LattePanda 3 Delta BIOS Firmware
 
-## Default BIOS (S70JR200-CN51G-8G-A_20230907094723)  --Update 2023/09/07
+## Default BIOS (S70JR200-CN51G-8G-A)
 This is used for mass production. Your board uses this BIOS firmware by default.
 
 ### BIOS Information
 
 * Build Date:	2023/09/07
-* BIOS ROM: LP-BS-7-S70JR200-CN51G-8G-A_20230907094723.bin
-* CheckSum: 83A8
-* BIOS Message: LP-BS-7-S70JR200-CN51G-8G-A BIOS Date: 09/07/2023 09:47:23
-* BIOS Version：LP-BS-7-S70JR200-CN51G-8G-A
+* BIOS Name:	LP-BS-7-S70JR200-CN51G-8G-A_20230907094723.bin
+* Checksum:	83A8
+* BIOS Message: 	LP-BS-7-S70JR200-CN51G-8G-A BIOS Date: 09/07/2023 09:47:23
 
 ###  Update Record
 
 * Added GPP_D6 level control option, default to low.
+* Update version S70JR120 to S70JR200
 
 
-### Optional BIOS (S70JR200-CN51G-8G_A_PCIE_20240529134300)
+### Optional BIOS (S70JR200-CN51G-8G_A_PCIE)
 
-Based on the S70JR200-CN51G-8G-A_20230907094723 BIOS version, the SATA III lane in the M.2 B Key has been switched to the PCIe x1 lane. Therefore, if you wish to utilize the PCIe signal in the M.2 B Key slot, you should update your board with this BIOS firmware.
+Based on the S70JR200-CN51G-8G-A BIOS version, the SATA III lane in the M.2 B Key has been switched to the PCIe x1 lane. Therefore, if you wish to utilize the PCIe signal in the M.2 B Key slot, you should update your board with this BIOS firmware.
 
 #### BIOS Information
 
 * Build Date:	2024/05/29
 * BIOS Name:	LP-BS-7-S70JR200-CN51G-8G_A_PCIE_20240529134300.bin
-* BIOS Message:	LP-BS-7-S70JR200-CN51G-8G_A_PCIE_20240529134300 BIOS Date: 29/05/2024 13:43:00
+* Checksum:	ABF1
+* BIOS Message:	LP-BS-7-S70JR200-CN51G-8G_A_PCIE BIOS Date: 29/05/2024 13:43:00
 
 ####  Update Record
 
 * Change the SATA III lane in M.2 B Key to the PCIe x1 lane
 
-## Default BIOS (S70JR120-CN51G-D)  -- Update 2022/08/15
+
+
+## BIOS (S70JR120-CN51G-D)
 
 This is used for mass production. Your board uses this BIOS firmware by default.
 
@@ -114,14 +117,17 @@ Based on the S70JR120-CN51G-E BIOS version, this adds the voltage control of the
 * Add: Advanced->Power Management-> Add GPP_D6 Output Level
 
 ####  How to Set?
-After the reflash, reboot the board. Continuous press 'DEL' key to  enter into the BIOS setup, then choose Advanced -> Power Management -> GPP_D6 Output Level: LOW. Then save and exit. Reboot the board, you eDP screen should work fine now.
+After the reflash, reboot the board. Continuous press 'DEL' key to  enter into the BIOS setup, then choose Advanced -> Power Management -> GPP_D6 Output Level: LOW. Then save and exit. Reboot the board, your eDP screen should work fine now.
 
 
 
+## Note
 
-### To download, please click "Download ZIP"
+1. **To download, please click "Download ZIP"**
 
-### How to update the BIOS firmware?
+2. **How to update the BIOS firmware?**
 
-  Please see the tutorial: http://docs.lattepanda.com/content/3rd_delta_edition/bios/
+   Please see the tutorial: http://docs.lattepanda.com/content/3rd_delta_edition/bios/
+
+3.  **The S70JR200 BIOS firmware version is compatible with both the S70JR200 and S70JR120 hardware versions.** 
 
