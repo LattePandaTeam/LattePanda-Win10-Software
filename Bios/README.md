@@ -42,7 +42,7 @@ Ensure that you have saved the Windows product key code and you have an SPI chip
 4. Plugin the MicroUSB cable and power on the system
 5. Wait the refreshing the BIOS automatically until returning "fs1:\>" (Check the “Refresh BIOS successfully”)
 
-![](https://github.com/LattePandaTeam/Docs/blob/master/assets/images/LP%20V1/V1_BIOS/Refresh-BIOS-successfully.jpg)
+![](https://github.com/LattePandaTeam/Docs/blob/main/docs/assets/images/LP%20V1/V1_BIOS/Refresh-BIOS-successfully.webp)
 
 7. Unplug the U-disk!
 8. Restart the system via pressing the reset button or "Ctrl+Alt+Del". Then finish refreshing.
@@ -53,7 +53,7 @@ https://youtu.be/du1BuDCn1WQ
 Thank Fred for the contribution of BIOS flashing tutorial video**
 
 
-Checkout the [LattePanda official docs for more tutorials](http://www.lattepanda.com/docs) 
+Checkout the [LattePanda official docs for more tutorials](https://docs.lattepanda.com/) 
 
 ## FAQ
 
