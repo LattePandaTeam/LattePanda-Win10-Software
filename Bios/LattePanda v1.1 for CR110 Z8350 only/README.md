@@ -23,7 +23,7 @@ Ensure that you have saved the Windows product key code and you have an SPI chip
 
 
 
-Checkout the [LattePanda official docs for more tutorials](http://www.lattepanda.com/docs) 
+Checkout the [LattePanda official docs for more tutorials](https://docs.lattepanda.com/) 
 
 
 
