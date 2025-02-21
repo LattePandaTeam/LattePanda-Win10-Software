@@ -22,7 +22,7 @@ S70CR110/S70CR100 Z8300 -> V1.0
 S70CR110 Z8350 -> V1.1   
 S70CR200 Z8350 -> V1.2  
 
-![](https://github.com/LattePandaTeam/Docs/blob/master/assets/images/8350-sticker.png)
+![](https://github.com/LattePandaTeam/Docs/blob/main/docs/assets/images/8350-sticker.webp)
 
 
 
